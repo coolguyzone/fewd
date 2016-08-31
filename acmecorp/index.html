@@ -2,27 +2,48 @@
 <!-- fixes to change
 
 -header seems to be a little bit too tall
+*changed header height from 96px to 74px
 
 -'products' text shadow looks off, shadow color too dark?
+*changed shadow color from black to a gray value
 
 -'products' link too close to button, padding?
+*changed padding-right from 10 to 20px
 
 - button looks too round
+-changed border radius from 10px to 5px
 
 -button looks too tall
+*changed to height: 45px and width: 105px
 
 -button shadow looks off, wrong color?
+*changed border color to black
 
 -acme logo looks too big
+*changed height from 96 to 60px
 
 -header border looks too thick or dark
+*changed border color from black to a gray value
 
 -border/shadow on main box seems a little different
+*changed shadow color from black to a gray value
 
 -hr bar looks 3-dimensional in screenshot, 2-dimensional in my version
+DON"T KNOW HOW TO FIX!!!
 
 -footer text is too big
+*changed font size to 0.77em
 
+-header image too close to top. padding?
+*added padding top 6px
+
+-button padding off
+-changed margin-top to 15px
+
+-header image too close to left edge
+*added padding-left 16px
+
+-footer text color looks a bit off
 
 
 -->
@@ -43,16 +64,18 @@ body {
 
 header {
   background-color: #c4c4c4;
-  height: 96px;
+  height: 74px;
   width: auto;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid rgb(148, 148, 148);
+  border-bottom: 1px solid rgb(148, 148, 148);
   box-shadow: 0 1px 1px #888888;
 }
 
 header img {
-  height: 96px;
+  height: 60px;
   float: left;
+  padding-top: 6px;
+  padding-left: 16px;
 
 }
 
@@ -60,22 +83,26 @@ header button {
   background-color: #2A4CB2;
   color: white;
   margin-right: 20px;
-  margin-top: 20px;
-  height: 50px;
-  width: 120px;
+  margin-top: 15px;
+  height: 45px;
+  width: 105px;
   font-size: 1em;
-  border-radius: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+
+
 }
 
 nav {
   float: right;
+
 }
 
 header a {
-  margin-right: 10px;
+  margin-right: 20px;
   padding-top: 10px;
   color: white;
-  text-shadow: 1px 1px black;
+  text-shadow: 1px 1px rgb(220, 220, 220);
   text-decoration: none;
 
 }
@@ -91,7 +118,7 @@ main {
   padding: 20px;
   margin-top: 40px;
   margin-bottom: 40px;
-  box-shadow: 0 3px 3px #888888;
+  box-shadow: 0 3px 3px rgb(190, 190, 190);
 }
 
 
@@ -99,7 +126,8 @@ main {
 footer {
   text-align: center;
   height: 96px;
-  color: rgb(141, 147, 163);
+  color: rgb(166, 153, 154);
+  font-size: 0.77em;
 
 }
 
