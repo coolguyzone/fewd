@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<!-- fixes to change
+<!-- fixes to make
 
 -header seems to be a little bit too tall
 *changed header height from 96px to 74px
@@ -29,7 +29,7 @@
 *changed shadow color from black to a gray value
 
 -hr bar looks 3-dimensional in screenshot, 2-dimensional in my version
-DON"T KNOW HOW TO FIX!!!
+*added box shadow
 
 -footer text is too big
 *changed font size to 0.77em
@@ -44,6 +44,7 @@ DON"T KNOW HOW TO FIX!!!
 *added padding-left 16px
 
 -footer text color looks a bit off
+*changed color
 
 -hr width a bit short
 *changed hr width to 640px
@@ -116,10 +117,10 @@ header a {
 main {
   margin-left: auto;
   margin-right: auto;
-  max-width: 600px;
+  max-width: 660px;
   background-color: white;
   border-radius: 5px;
-  padding: 20px;
+  padding: 25px;
   margin-top: 40px;
   margin-bottom: 40px;
   box-shadow: 0 3px 3px rgb(190, 190, 190);
@@ -135,7 +136,6 @@ font-weight: 900;
 
 footer {
   text-align: center;
-  height: 96px;
   color: rgb(166, 153, 154);
   font-size: 0.77em;
 
@@ -143,18 +143,14 @@ footer {
 
 footer hr {
   width: 640px;
-  /*  border: 1px solid rgb(226, 226, 226);
-  height: 4px;
-    border: 0;
-    box-shadow: inset 2px 6px 12px -12px black;
-    height: 4px;
-  border-top: 1px solid rgb(226, 226, 226);
-  box-shadow: 0 10px 5px -10px white inset; */
-  width: 640px;
     background-color: rgb(226, 226, 226);
     height: 2px;
     box-shadow: 0 1px 2px 0px white;
     border: none;
+}
+
+footer p {
+  padding-top: 17px;
 }
 
 </style>
@@ -168,7 +164,7 @@ footer hr {
   <img src="images/acme-corp.jpg">
 
   <nav>
-    <a href="fakelink.com">Products</a>
+    <a href="http://poop.bike">Products</a>
     <button type="button">Sign Up</button>
   </nav>
 
