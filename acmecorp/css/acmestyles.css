@@ -1,0 +1,94 @@
+* {
+  font-family: "Lucida Grande";
+
+}
+
+body {
+  margin: 0px;
+  background-image: url("../images/background.png");
+}
+
+
+header {
+  background-color: #c4c4c4;
+  height: 74px;
+  width: auto;
+  border-top: 1px solid rgb(148, 148, 148);
+  border-bottom: 1px solid rgb(148, 148, 148);
+  box-shadow: 0 1px 1px #888888;
+}
+
+header img {
+  height: 60px;
+  float: left;
+  padding-top: 6px;
+  padding-left: 16px;
+
+}
+
+button {
+  background-color: #2A4CB2;
+  color: white;
+  margin-right: 20px;
+  margin-top: 15px;
+  height: 45px;
+  width: 105px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid black;
+
+
+}
+
+nav {
+  float: right;
+
+}
+
+header a {
+  margin-right: 20px;
+  padding-top: 10px;
+  color: white;
+  text-shadow: 1px 1px rgb(93, 107, 192);
+  text-decoration: none;
+
+}
+main {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 660px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 25px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 3px 3px rgb(190, 190, 190);
+
+
+
+}
+
+main h1 {
+font-weight: 900;
+}
+
+
+
+footer {
+  text-align: center;
+  color: rgb(166, 153, 154);
+  font-size: 0.77em;
+
+}
+
+footer hr {
+  width: 640px;
+    background-color: rgb(226, 226, 226);
+    height: 2px;
+    box-shadow: 0 1px 2px 0px white;
+    border: none;
+}
+
+footer p {
+  padding-top: 17px;
+}
