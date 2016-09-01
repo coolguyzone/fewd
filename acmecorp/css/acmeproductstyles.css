@@ -22,3 +22,13 @@
 main {
   height: 750px;
 }
+
+button {
+  width: 133px;
+  height: 43px;
+}
+
+.products a {
+  text-decoration: none;
+  color: #2A4CB2;
+}
