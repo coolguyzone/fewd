@@ -1,19 +1,71 @@
-main p {
-  display: inline;
-}
+/*
 
-input {
+TO FIX:
+-Fuzz around focus border
+
+-Add DropDown
+*done
+
+-Add checkbox
+*done
+
+
+
+*/
+
+
+
+
+.FormFields input {
   color: gray;
-  margin-left: 70px;
+  margin-left: 40px;
   height: 22px;
-  width: 130px;
+  width: 135px;
   border: 3px solid #dedede;
   border-radius: 5px;
   padding-left: 10px;
+  margin-bottom: 13px;
 
-  float: right;
 }
 
-main {
-    padding-right: 420px;
+
+input:focus {
+  border: 3px solid #2A4CB2;
+  outline: none;
+
+}
+
+
+.Form {
+  display: flex;
+}
+
+.FormTitles {
+  flex: 1;
+}
+
+.FormFields {
+  flex: 2;
+  margin-top: 20px;
+  padding-right: 320px;
+}
+
+
+.FormTitles p {
+  margin-top: 26px;
+  font-weight: 575;
+}
+
+main h1 {
+  margin-bottom: 0;
+  margin-top: 4px;
+}
+
+.DropDown p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.Agree input {
+  margin-top: 20px;
 }

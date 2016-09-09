@@ -1,0 +1,46 @@
+img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.mainimage {
+  width: 100%;
+}
+
+.logo{
+  width: 160px;
+  margin-top: 9px;
+  margin-bottom: 9px;
+}
+
+body {
+  margin: 3px;
+}
+
+.columnone, .columntwo {
+  display: flex;
+}
+
+.toptext, .bottomtext {
+  flex: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.toptext h2 {
+  margin-bottom: 0;
+}
+
+.toptext p {
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+h2, p {
+  margin-left: 5px;
+  margin-right: 5px;
+}

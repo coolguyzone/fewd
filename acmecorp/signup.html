@@ -9,27 +9,55 @@
   <body>
 
     <header>
-      <img src="images/acme-corp.jpg">
+      <a href="index.html"><img src="images/acme-corp.jpg"></a>
 
       <nav>
-        <a href="http://poop.bike">Products</a>
-        <button type="button">Sign Up</button>
+        <a href="products.html">Products</a>
+        <a href="signup.html"><button type="button">Sign Up</button></a>
       </nav>
+
     </header>
 
     <main>
-      <h1>Sign Up</h1>
-      <p>First Name</p>
-      <input type="text" name="FirstName" value="John">
-      <br><br>
-      <p>Last Name</p>
-      <input type="text" name="LastName" value="Doe">
-      <br><br>
-      <p>Email</p>
-      <input type="text" name="Email" value="john.doe@example.com">
-      <br><br>
-      <p>Password</p>
-      <input type="text" name="Password">
+       <h1>Sign Up</h1>
+
+
+      <div class="Form">
+        <div class="FormTitles">
+          <p>First Name</p>
+          <p>Last Name</p>
+          <p>Email</p>
+          <p>Password</p>
+        </div>
+
+        <div class="FormFields">
+          <input type="text" name="FirstName" value="John">
+          <input type="text" name="LastName" value="Doe">
+          <input type="text" name="Email" value="john.doe@example.com">
+          <input type="text" name="Password">
+
+
+        </div>
+
+
+    </div>
+
+    <div class="DropDown">
+      <p>How did you hear about us?</p>
+      <select name="HearAbout">
+        <option value="blank"></option>
+        <option value="friend">Friend</option>
+        <option value="search">Search</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <div class="Agree">
+      <input type="checkbox" name="terms" value="yes">Agree to our terms of service</input>
+    </div>
+      <button type="button">Sign Up</button>
+
+
 
     </main>
 
