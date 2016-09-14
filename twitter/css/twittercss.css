@@ -3,6 +3,10 @@ TO FIX:
 
 *Put character count in lower right corner of textarea.
 
+*Fix spacing in footer
+
+*Make header a color gradient
+
 
 
 
@@ -32,7 +36,7 @@ header a {
 }
 
 header {
-  background-color: #18ae6f;
+  background: linear-gradient(to-bottom; #18ae6f 0%, black 1000%);
   height: 62px;
   padding-top: 18px;
 }
@@ -113,16 +117,51 @@ textarea {
   margin-top: 38px;
 }
 
-span {
+.comment {
   display: inline-block;
-  font-size: 1.4em;
+  font-size: 1.6em;
   width: 70%;
   margin-top: 20px;
   margin-left: 10px;
   position: absolute;
 }
 
-/*.responsetext {
-  width: 40%;
+p {
   display: inline-block;
-}*/
+  color: #069456;
+  font-size: 1.4em;
+  font-weight: 800;
+  margin-left: 10px;
+  margin-top: 86px;
+
+}
+
+.likecount {
+  color: #cccccc;
+  font-size: 1.2em;
+  font-weight: 100;
+
+}
+
+footer {
+  display: flex;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+footer span {
+  flex: 2;
+  color: #b4b4b4;
+  font-size: 1.2em;
+}
+
+.terms {
+  flex: 2;
+}
+
+.privacy {
+  flex: 2;
+}
