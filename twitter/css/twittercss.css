@@ -36,7 +36,7 @@ header a {
 }
 
 header {
-  background: linear-gradient(to-bottom; #18ae6f 0%, black 1000%);
+  background: linear-gradient(rgb(48, 196, 133), rgb(7, 148, 88));
   height: 62px;
   padding-top: 18px;
 }
@@ -49,6 +49,8 @@ button {
   border-radius: 5px;
   font-size: 1.2em;
   font-weight: 600;
+  border: none;
+  box-shadow: 0 1px 1px 1px rgb(5, 119, 69);
 }
 
 .signupbutton {
@@ -101,10 +103,11 @@ main hr{
 
 .toprow {
   margin-top: 0;
+  position: relative;
 }
 
 textarea {
-  width: 67.5%;
+  width: 84.2%;
   height: 54px;
   /*margin-bottom: 24px;*/
   margin-left: 10px;
@@ -116,6 +119,7 @@ textarea {
   position: absolute;
   margin-top: 38px;
 }
+
 
 .comment {
   display: inline-block;
@@ -164,4 +168,11 @@ footer span {
 
 .privacy {
   flex: 2;
+}
+
+.maxchars {
+position: absolute;
+  right: 45px;
+  bottom: 76px;
+  font-weight: 600;
 }
