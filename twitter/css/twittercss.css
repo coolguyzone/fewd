@@ -26,8 +26,8 @@ nav {
 
 header h2 {
   display: inline;
-  font-size: 2.2em;
-  margin-left: 20px;
+  font-size: 2.9em;
+  margin-left: 34px;
 }
 
 header a {
@@ -37,8 +37,8 @@ header a {
 
 header {
   background: linear-gradient(rgb(48, 196, 133), rgb(7, 148, 88));
-  height: 62px;
-  padding-top: 18px;
+  height: 82px;
+  padding-top: 24px;
 }
 
 button {
@@ -60,7 +60,7 @@ button {
 .tweetbutton {
   margin-left: 10px;
   margin-bottom: 14px;
-  margin-top: 118px;
+  margin-top: 136px;
 }
 
 main {
@@ -88,8 +88,8 @@ main hr{
 }
 
 .contentrow img {
-  width: 78px;
-  height: 78px;
+  width: 100px;
+  height: 100px;
   border-radius: 5px;
   margin-left: 40px;
   margin-top: 20px;
@@ -98,7 +98,7 @@ main hr{
 
 .toprow img {
   margin-top: 0px;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
 }
 
 .toprow {
@@ -108,7 +108,7 @@ main hr{
 
 textarea {
   width: 84.2%;
-  height: 54px;
+  height: 70px;
   /*margin-bottom: 24px;*/
   margin-left: 10px;
   border-radius: 5px;
@@ -152,22 +152,22 @@ footer {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 60px;
+  margin-bottom: 70px;
 }
 
 footer span {
-  flex: 2;
+  flex-grow: 1;
   color: #b4b4b4;
   font-size: 1.2em;
 }
 
 .terms {
-  flex: 2;
+
 }
 
 .privacy {
-  flex: 2;
+
 }
 
 .maxchars {
