@@ -88,10 +88,6 @@ img {
 
 }
 
-.responseavatar {
-  margin-top: 24px;
-}
-
 textarea {
   width: 98%;
   display: relative;
@@ -141,7 +137,9 @@ textarea {
   font-weight: 600;
 }
 
-/* FOOOTER */
+.responseavatar {
+  margin-top: 24px;
+}
 
 footer {
   display: flex;
