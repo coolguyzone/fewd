@@ -2,10 +2,13 @@
 TO FIX:
 
 *Put character count in lower right corner of textarea.
+-Done
 
 *Fix spacing in footer
+-Done, used flex-grow property
 
 *Make header a color gradient
+-Done
 
 
 
@@ -18,6 +21,8 @@ body {
   background-color: #f1f0f5;
   font-family: arial;
 }
+
+/* HEADER AND NAV */
 
 nav {
   float: right;
@@ -41,6 +46,8 @@ header {
   padding-top: 24px;
 }
 
+/* BUTTONS */
+
 button {
   color: white;
   background-color: #069456;
@@ -63,6 +70,8 @@ button {
   margin-top: 136px;
 }
 
+/* MAIN */
+
 main {
   background-color: white;
   margin-left: auto;
@@ -70,13 +79,6 @@ main {
   max-width: 84%;
   margin-top: 46px;
   border-radius: 5px;
-}
-
-.contentrow {
-
-
-}
-.bottomrow {
 }
 
 main hr{
@@ -93,7 +95,6 @@ main hr{
   border-radius: 5px;
   margin-left: 40px;
   margin-top: 20px;
-  /*margin-bottom: 20px;*/
 }
 
 .toprow img {
@@ -109,7 +110,6 @@ main hr{
 textarea {
   width: 84.2%;
   height: 70px;
-  /*margin-bottom: 24px;*/
   margin-left: 10px;
   border-radius: 5px;
   color: #a9a9a9;
@@ -119,6 +119,14 @@ textarea {
   position: absolute;
   margin-top: 38px;
 }
+
+.maxchars {
+position: absolute;
+  right: 48px;
+  bottom: 79px;
+  font-weight: 600;
+}
+
 
 
 .comment {
@@ -147,6 +155,8 @@ p {
 
 }
 
+/* FOOTER */
+
 footer {
   display: flex;
   width: 60%;
@@ -160,19 +170,4 @@ footer span {
   flex-grow: 1;
   color: #b4b4b4;
   font-size: 1.2em;
-}
-
-.terms {
-
-}
-
-.privacy {
-
-}
-
-.maxchars {
-position: absolute;
-  right: 48px;
-  bottom: 79px;
-  font-weight: 600;
 }
