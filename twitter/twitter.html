@@ -45,7 +45,8 @@
         <img src="img/chippy.jpeg" class="responseavatar">
         <div class="tweetcontent">
           <p class="comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-          <p class="like">Like</p> <span class="likecount">(54)</span>
+          <p class="like">Like</p>
+          <span class="likecount">(54)</span>
         </div>
       </div>
     </main>
@@ -58,6 +59,41 @@
       <span class="privacy">Privacy Policy</span>
       <span class="contact">Contact Us</span>
     </footer>
+
+    <script type="text/javascript">
+    var newRow = document.createElement("div");
+    newRow.setAttribute("class", "row finalrow");
+    document.querySelector("main").appendChild(newRow);
+
+    var newImg = document.createElement("img");
+    newImg.setAttribute("src", "img/steve.jpeg");
+    newImg.setAttribute("class", "responseavatar");
+    newRow.appendChild(newImg);
+
+    var newTweetContent = document.createElement("div");
+    newTweetContent.setAttribute("class", "tweetcontent");
+    newRow.appendChild(newTweetContent);
+
+    var newComment = document.createElement("p");
+    newComment.setAttribute("class", "comment");
+    newComment.textContent = "I hate javascript";
+    newTweetContent.appendChild(newComment);
+
+    var newLike = document.createElement("p");
+    newLike.setAttribute("class", "like");
+    newLike.textContent = "Like";
+    newTweetContent.appendChild(newLike);
+
+    var newLikeCount = document.createElement("span");
+    newLikeCount.setAttribute("class","likecount");
+    newLikeCount.textContent = "(69)";
+    newTweetContent.appendChild(newLikeCount);
+
+    document.querySelector(".finalrow").setAttribute("class", "row");
+
+
+
+    </script>
 
   </body>
 </html>
