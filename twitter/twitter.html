@@ -77,6 +77,7 @@
       var newRow = document.createElement("div");
       newRow.setAttribute("class", "row finalrow");
       document.querySelector("main").appendChild(newRow);
+      document.querySelector("main").insertBefore(newRow, document.querySelector("main").childNodes[2]);
 
       var newImg = document.createElement("img");
       newImg.setAttribute("src", "img/steve.jpeg");
@@ -117,11 +118,11 @@
     //CLEAR THE TEXTAREA BOX
 
     function tweetCounter (event) {
-    document.querySelector(".maxchars").textContent = 140 - document.querySelector("textarea").value.length;
-}
+      document.querySelector(".maxchars").textContent = 140 - document.querySelector("textarea").value.length;
+    }
 
-var b = document.querySelector("textarea");
-b.addEventListener("keyup", tweetCounter);
+    var b = document.querySelector("textarea");
+    b.addEventListener("keyup", tweetCounter);
 
     </script>
 
