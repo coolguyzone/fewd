@@ -61,37 +61,67 @@
     </footer>
 
     <script type="text/javascript">
-    var newRow = document.createElement("div");
-    newRow.setAttribute("class", "row finalrow");
-    document.querySelector("main").appendChild(newRow);
 
-    var newImg = document.createElement("img");
-    newImg.setAttribute("src", "img/steve.jpeg");
-    newImg.setAttribute("class", "responseavatar");
-    newRow.appendChild(newImg);
+    //Create a FN: createTweet(text, image)
+      //do.qs 10 times or so, append 10 times or so, set attribute 4 or 5 times, add classes 7 or so times
+      //reference the html
 
-    var newTweetContent = document.createElement("div");
-    newTweetContent.setAttribute("class", "tweetcontent");
-    newRow.appendChild(newTweetContent);
+    //Attach event listener to the form
+      //listen for submit and call some function
 
-    var newComment = document.createElement("p");
-    newComment.setAttribute("class", "comment");
-    newComment.textContent = "I hate javascript";
-    newTweetContent.appendChild(newComment);
+    function newComment (event) {
+      console.log(event)
 
-    var newLike = document.createElement("p");
-    newLike.setAttribute("class", "like");
-    newLike.textContent = "Like";
-    newTweetContent.appendChild(newLike);
+      event.preventDefault();
 
-    var newLikeCount = document.createElement("span");
-    newLikeCount.setAttribute("class","likecount");
-    newLikeCount.textContent = "(69)";
-    newTweetContent.appendChild(newLikeCount);
+      var newRow = document.createElement("div");
+      newRow.setAttribute("class", "row finalrow");
+      document.querySelector("main").appendChild(newRow);
 
-    document.querySelector(".finalrow").setAttribute("class", "row");
+      var newImg = document.createElement("img");
+      newImg.setAttribute("src", "img/steve.jpeg");
+      newImg.setAttribute("class", "responseavatar");
+      newRow.appendChild(newImg);
 
+      var newTweetContent = document.createElement("div");
+      newTweetContent.setAttribute("class", "tweetcontent");
+      newRow.appendChild(newTweetContent);
 
+      var newComment = document.createElement("p");
+      newComment.setAttribute("class", "comment");
+      newComment.textContent = document.querySelector("textarea").value;
+      newTweetContent.appendChild(newComment);
+
+      var newLike = document.createElement("p");
+      newLike.setAttribute("class", "like");
+      newLike.textContent = "Like";
+      newTweetContent.appendChild(newLike);
+
+      var newLikeCount = document.createElement("span");
+      newLikeCount.setAttribute("class","likecount");
+      newLikeCount.textContent = "(69)";
+      newTweetContent.appendChild(newLikeCount);
+
+      document.querySelector(".finalrow").setAttribute("class", "row");
+
+      document.querySelector("textarea").value = "";
+      document.querySelector(".maxchars").textContent = "140";
+
+    }
+
+    var a = document.querySelector(".tweetbutton");
+    a.addEventListener("click", newComment);
+
+    //ADD THE EVENT handleR AND LINK IT TO OUR function
+    //MAKE THE FUNCTION TAKE TEXT FROM THE TEXTAREA box
+    //CLEAR THE TEXTAREA BOX
+
+    function tweetCounter (event) {
+    document.querySelector(".maxchars").textContent = 140 - document.querySelector("textarea").value.length;
+}
+
+var b = document.querySelector("textarea");
+b.addEventListener("keyup", tweetCounter);
 
     </script>
 
