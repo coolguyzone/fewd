@@ -3,10 +3,9 @@
 //Create a function that increases a variable by 1
 
 var i = 0;
-function plusOneLike(event) {
+  function plusOneLike(event) {
   event.preventDefault();
   document.querySelector(".like-count").textContent = ++i;
-
 }
 
 //Link that function to trigger on a click event
@@ -26,9 +25,7 @@ function newComment (event) {
   c.appendChild(comment);
   //clear the textarea after new comment is posted
   document.querySelector("textarea").value = "";
-
 }
-
-//Lunk that function to trigger on a click event of the button
+//Link that function to trigger on a click event of the button
 var b = document.querySelector("button");
 b.addEventListener("click", newComment);
