@@ -4,6 +4,7 @@
 
 var i = 0;
 function plusOneLike(event) {
+  event.preventDefault();
   document.querySelector(".like-count").textContent = ++i;
 
 }
@@ -17,6 +18,7 @@ a.addEventListener("click", plusOneLike);
 
 //Create a function that adds a new div comment and sets it's textContent to the textContent of the textarea
 function newComment (event) {
+  event.preventDefault();
   var comment = document.createElement("div");
   comment.setAttribute("class", "comment");
   comment.textContent = document.querySelector("textarea").value;
