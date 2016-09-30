@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f0f4;
+}
+
+main {
+  display: flex;
+}
+
+.column1 {
+  flex: 3;
+  margin-left: 50px;
+}
+
+.column2 {
+  flex: 1;
+  margin-top: 22px;
+}
+
+.todoCount, button {
+  display: block;
+}
+
+.textInput {
+  width: 98%;
+  height: 48px;
+  border-radius: 5px;
+  font-size: 1.3em;
+  padding-left: 20px;
+
+}
+
+.todoCount {
+  font-size: 1.7em;
+  margin-bottom: 24px;
+}
+
+button {
+  color: white;
+  background-color: #049cd8;
+  width: 68%;
+  min-width: 70px;
+  height: 48px;
+  border-radius: 5px;
+  font-size: 1.2em;
+}

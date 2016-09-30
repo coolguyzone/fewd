@@ -1,0 +1,70 @@
+<h1>Practice with Arrays</h1>
+
+<p>
+  Instructions:
+</p>
+
+<ul>
+  There's an array called students in the code with everyone's names. When
+  "Role call!" is clicked, sort it. Then loop through the each student name and
+  add their name to the ordered list below. Finally put the total number of
+  students where the total appears.
+</ul>
+
+<hr>
+
+<p>
+  Total students: <span id="count" style="font-weight: bold">0</span>
+</p>
+
+<ol>
+</ol>
+
+<button>
+  Role call!
+</button>
+
+<script>
+var students = [
+  "Yaphet",
+  "Kelsey",
+  "Kat",
+  "Alex",
+  "Kirstin",
+  "David",
+  "Gian",
+  "Marcelo",
+  "Pablo",
+  "Michael",
+  "Mason",
+  "Lucas",
+  "Steve",
+  "Amanda",
+  "Tim",
+  "Aislinn"
+];
+
+
+// sort the array
+students.sort();
+//create a loop to add each item in the array as a li to the ol
+
+function roleCall(event) {
+  for (var i = 0; i < students.length; i++) {
+    var pupil = document.createElement("li");
+    pupil.textContent = students[i];
+    var list = document.querySelector("ol");
+    list.appendChild(pupil);
+  }
+  document.querySelector("#count").textContent = students.length;
+
+}
+
+var a = document.querySelector("button");
+a.addEventListener("click", roleCall);
+
+//bind code to the button in event handler
+
+
+
+</script>
