@@ -1,5 +1,7 @@
 
-function addTodo() {
+var i = 0;
+
+function addTodo(event) {
   var newLi = document.createElement("li");
   document.querySelector("ul").appendChild(newLi);
 
@@ -11,11 +13,14 @@ function addTodo() {
   newLabel.appendChild(newInput);
 
   var newSpan = document.createElement("span");
-  newSpan.textContent = "Eggs, Motherfucker!";
+  newSpan.textContent = document.querySelector(".textInput").value;
   newSpan.style.marginLeft = 4 + "px";
   newLabel.appendChild(newSpan);
 
-
+  document.querySelector(".Nothing").style.display = "none";
+  document.querySelector(".textInput").value = "";
+  document.querySelector(".todoNumber").textContent =  ++i;
 }
 
-addTodo();
+var a = document.querySelector("button");
+a.addEventListener("click", addTodo);

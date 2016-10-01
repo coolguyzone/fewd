@@ -18,6 +18,7 @@ main {
 .column2 {
   flex: 1;
   margin-top: 22px;
+
 }
 
 .todoCount, button {
@@ -51,4 +52,12 @@ button {
 input:checked + span {
   opacity: 0.2;
   text-decoration: line-through;
+}
+
+.Nothing {
+  display: block;
+  font-size: 1.8em;
+  text-align: center;
+  margin-top: 50px;
+
 }
