@@ -2,24 +2,32 @@
 var i = 0;
 
 function addTodo(event) {
-  var newLi = document.createElement("li");
-  document.querySelector("ul").appendChild(newLi);
+  var list = document.querySelector(".textInput").value;
+  list = list.split(",");
+  for(var j = 0; j < list.length; j++) {
 
-  var newLabel = document.createElement("label");
-  newLi.appendChild(newLabel);
+    var newLi = document.createElement("li");
+    document.querySelector("ul").appendChild(newLi);
 
-  var newInput = document.createElement("input");
-  newInput.setAttribute("type", "checkbox");
-  newLabel.appendChild(newInput);
+    var newLabel = document.createElement("label");
+    newLi.appendChild(newLabel);
 
-  var newSpan = document.createElement("span");
-  newSpan.textContent = document.querySelector(".textInput").value;
-  newSpan.style.marginLeft = 4 + "px";
-  newLabel.appendChild(newSpan);
+    var newInput = document.createElement("input");
+    newInput.setAttribute("type", "checkbox");
+    newLabel.appendChild(newInput);
 
-  document.querySelector(".Nothing").style.display = "none";
-  document.querySelector(".textInput").value = "";
-  document.querySelector(".todoNumber").textContent =  ++i;
+    var newSpan = document.createElement("span");
+    newSpan.textContent = list[j];
+    newSpan.style.marginLeft = 4 + "px";
+    newLabel.appendChild(newSpan);
+
+    document.querySelector(".Nothing").style.display = "none";
+    document.querySelector(".textInput").value = "";
+    document.querySelector(".todoNumber").textContent =  ++i;
+
+  }
+
+
 }
 
 var a = document.querySelector("button");
