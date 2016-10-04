@@ -61,3 +61,11 @@ input:checked + span {
   margin-top: 50px;
 
 }
+
+li, span {
+  cursor: pointer;
+}
+
+.checkbox {
+  background-color: white;
+}

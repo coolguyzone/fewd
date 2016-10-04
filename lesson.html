@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <main>
+<button type="button" name="button">Click Me!</button>
+<br>
+
+</main>
+
+
+
+
+
+
+  <body>
+
+
+<script type="text/javascript">
+
+
+function clicked(event) {
+  alert("I've been clicked!");
+  var newSpan = document.createElement("span");
+  newSpan.textContent = "Thanks for clicking me!";
+  var main = document.querySelector("main");
+  main.appendChild(newSpan);
+
+  
+
+}
+
+var a = document.querySelector("button");
+a.addEventListener("click", clicked);
+
+
+
+
+</script>
+
+  </body>
+</html>

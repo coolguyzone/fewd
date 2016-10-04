@@ -28,7 +28,11 @@ function addTodo(event) {
   }
 
 
-}
+  };
+
+
+
+
 
 var a = document.querySelector("button");
-a.addEventListener("click", addTodo);
+a.addEventListener("submit", addTodo);
