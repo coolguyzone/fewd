@@ -35,4 +35,4 @@ function addTodo(event) {
 
 
 var a = document.querySelector("button");
-a.addEventListener("submit", addTodo);
+a.addEventListener("click", addTodo);
