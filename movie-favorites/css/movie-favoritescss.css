@@ -1,0 +1,54 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333133;
+  color: white;
+  font-family: arial;
+}
+
+h1, p {
+  margin-left: 20px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+
+.firstrow {
+  display: flex;
+
+}
+
+.secondrow {
+  display: flex;
+  width: 40%;
+  margin-top:20px;;
+}
+
+.imgdiv {
+  flex: 1;
+    max-width: 200px;
+  height: auto;
+  margin-left: 20px;
+}
+.movie-data {
+  flex: 2;
+  margin-left: 80px;
+}
+
+
+
+img {
+  width: 100%;
+
+  height: auto;
+}
+
+table {
+  text-align: left;
+}

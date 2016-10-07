@@ -5,7 +5,7 @@
   $7.99
 </button>
 
-<button id="cheeseburger" data-description="BURGER W/ CHZ" data-price="7.99">
+<button id="cheeseburger" data-description="BURGER W/ CHZ" data-price="8.99">
   Cheeseburger<br>
   $8.99
 </button>
@@ -52,19 +52,51 @@
 </table>
 
 <script>
+//when button is clicked:
+  //add price and description to the table
+    //create element three times (two TDs one TR)
+    //appendChild three times
+  //update total
+    //parseFloat
+    //round data
+    //querySelector and textContent
+  //hide the 'no items' block
+    //add a class (classList.add("hidden"))
 
-// function burger(event) {
-//   var total = document.querySelector("#total");
-//   total.textContent = parseFloat(total.textContent) + 7.99;
-// }
-//
+
+
+function addItem(event) {
+document.querySelector("#no-items").setAttribute("class", "hidden");
+var total = document.querySelector("#total");
+total.textContent = (parseFloat(total.textContent) + parseFloat(event.target.getAttribute("data-price"))).toFixed(2);
+var newTr = document.createElement("tr");
+document.querySelector("table").appendChild(newTr);
+var nameTd = document.createElement("td");
+nameTd.textContent=event.target.getAttribute("data-description");
+newTr.appendChild(nameTd);
+var priceTd = document.createElement("td");
+priceTd.textContent=event.target.getAttribute("data-price");
+newTr.appendChild(priceTd);
+
+console.log(event.target.getAttribute("data-price"));
+}
+
 // var b = document.querySelector("#hamburger");
-// b.addEventListener("click", burger);
+// var cheeseburger = document.querySelector("#cheeseburger");
+// b.addEventListener("click", addItem);
+// cheeseburger.addEventListener("click", addItem);
 
-var foodArray = ["hamburger", "cheeseburger", "fries", "soda", "shake", "pie", "bag"];
-var priceArray = [7.99, 8.99, 7.99, 1.99, 1.99, 1.99, 10];
+var buttons = document.querySelectorAll("button");
 
+for (var i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", addItem);
+}
 
+//
+// var foodArray = ["hamburger", "cheeseburger", "fries", "soda", "shake", "pie", "bag"];
+// var priceArray = [7.99, 8.99, 7.99, 1.99, 1.99, 1.99, 10];
+//
+//
 
 
 
