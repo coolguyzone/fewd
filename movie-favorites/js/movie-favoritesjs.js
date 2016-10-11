@@ -35,7 +35,7 @@
 //DO IT WITH THE LOOP AND EVENT.TARGET
 
 function getMovieData(event) {
-  $.get("http://omdbapi.com/?i=" + event.target.id, displayResults);
+  $.get("https://omdbapi.com/?i=" + event.target.id, displayResults);
 
   function displayResults(results) {
     document.querySelector("#movie-title").textContent = results.Title;

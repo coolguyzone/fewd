@@ -34,3 +34,4 @@ for (var i = 0; i < options.length; i++) {
 //How can you make the food options not repeat?
 //Why are some divs not getting background colors?
 //How can you make the last div stay on the page?
+//How can you create a alternating message for player 1 and player 2?
