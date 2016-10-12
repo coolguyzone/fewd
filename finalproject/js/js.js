@@ -62,6 +62,11 @@ for (var i = 0; i < options.length; i++) {
   //*When the html doesn't recognize a color name, it turns up black
 
 //How can you make the last div stay on the page?
+
 //How can you create a alternating message for player 1 and player 2?
+
 //Rotisserie chicken and other long names end up overflowing the div
+
 //Set the height of the text on the divs to the middle
+
+//Finish adding emojis
