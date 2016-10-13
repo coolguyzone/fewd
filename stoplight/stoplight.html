@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Stoplight</title>
+    <style media="screen">
+    * {
+      box-sizing: border-box;
+    }
+
+      .frame {
+        width: 200px;
+        height: 460px;
+        background-color: gold;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+        padding: 20px 0 20px 0;
+      }
+      .light {
+        width: 115px;
+        height: 115px;
+        background-color: gray;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        border-radius: 100px;
+
+      }
+
+      .flashing {
+        background-color: gray;
+      }
+
+      .yellow-light-on {
+        background-color: yellow;
+      }
+
+      .green-light-on {
+        background-color: green;
+      }
+
+      .red-light-on {
+        background-color: red;
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+
+    <div class="buttons">
+      <button type="button" class="stopButton" name="button">Stop</button>
+      <button type="button" class="slowButton" name="button">Slow</button>
+      <button type="button" class="goButton" name="button">Go</button>
+      <button type="button" class="cautionButton" name="button">Caution</button>
+      <button type="button" class="clearButton" name="button">Clear</button>
+    </div>
+
+    <div class="frame">
+      <div class="light redlight">
+      </div>
+      <div class="light yellowlight">
+
+      </div>
+      <div class="light greenlight">
+
+      </div>
+    </div>
+
+<script type="text/javascript">
+
+var greenLight = document.querySelector(".greenlight");
+var yellowLight = document.querySelector(".yellowlight");
+var redLight = document.querySelector(".redlight");
+
+function greenLightOn(event) {
+  greenLight.classList.add("green-light-on");
+  yellowLight.classList.remove("yellow-light-on");
+  redLight.classList.remove("red-light-on");
+  clearInterval(flicker);
+
+}
+
+function redLightOn(event) {
+  redLight.classList.add("red-light-on");
+  yellowLight.classList.remove("yellow-light-on");
+  greenLight.classList.remove("green-light-on");
+  clearInterval(flicker);
+
+}
+
+function yellowLightOn(event) {
+
+  yellowLight.classList.add("yellow-light-on");
+  redLight.classList.remove("red-light-on");
+  greenLight.classList.remove("green-light-on");
+  clearInterval(flicker);
+
+}
+
+function clearLights(event) {
+  yellowLight.classList.remove("yellow-light-on");
+  redLight.classList.remove("red-light-on");
+  greenLight.classList.remove("green-light-on");
+  clearInterval(flicker);
+}
+
+flicker = "foo";
+
+function cautionLights(event) {
+
+
+  yellowLightOn();
+
+
+
+  flicker = setInterval(function() {
+
+        yellowLight.classList.toggle("yellow-light-on");
+
+  }, 1000);
+
+}
+
+
+document.querySelector(".goButton").addEventListener("click", greenLightOn);
+document.querySelector(".slowButton").addEventListener("click", yellowLightOn);
+document.querySelector(".stopButton").addEventListener("click", redLightOn);
+document.querySelector(".clearButton").addEventListener("click", clearLights);
+document.querySelector(".cautionButton").addEventListener("click", cautionLights);
+
+
+</script>
+  </body>
+</html>
