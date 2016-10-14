@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <title></title>
+
+  </head>
+  <body>
+
+
+<script type="text/javascript">
+  $.get("http://omdbapi.com/?s=terminator", function(results) {
+    console.log(results.totalResults);
+    console.log(results.Search[2].Title);
+    console.log(results.Search[9].Title);
+
+    //Always the last one
+    console.log(results.Search[results.Search.length - 1].Title);
+
+    for (var i = 0; i < results.Search.length; i++) {
+        console.log(results.Search[i].Title);
+    }
+
+  });
+
+</script>
+  </body>
+</html>

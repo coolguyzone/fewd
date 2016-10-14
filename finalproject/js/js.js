@@ -43,15 +43,54 @@ function addFoodOptions() {
 
 addFoodOptions();
 
+var turn = 1;
+console.log("Player 1 is up (first turn)");
+
 function removeFoodOption(event) {
   event.target.setAttribute("class", "hidden");
+  turn = turn + 1;
+  console.log(turn);
+  if (turn === 1) {
+    console.log("player 1 is up!");
+  }
+  else if (turn === 2) {
+    console.log("player 2 is up!");
+  }
+    else if (turn === 3) {
+      console.log("player 1 is up!");
+    }
+    else if (turn === 4) {
+      console.log("player 2 is up!");
+    }
+    else if (turn === 5) {
+      console.log("player 1 is up!");
+    }
+    else if (turn === 6) {
+      console.log("player 2 is up! (last turn!)");
+      }
+      else if (turn === 7) {
+        console.log("GAME OVER");
+        var finalOption = document.querySelector(".foodOption");
+        finalOption.setAttribute("class", "final-option");
+        finalOption.removeEventListener("click", removeFoodOption);
+        }
+
+
+
+
 }
+
 
 var options = document.querySelectorAll(".foodOption");
 
+
 for (var i = 0; i < options.length; i++) {
   options[i].addEventListener("click", removeFoodOption);
-}
+
+  }
+
+
+
 
 
 
