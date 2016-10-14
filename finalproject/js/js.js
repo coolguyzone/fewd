@@ -48,6 +48,7 @@ console.log("Player 1 is up (first turn)");
 
 function removeFoodOption(event) {
   event.target.setAttribute("class", "hidden");
+  var h2 = document.querySelector("h2");
   turn = turn + 1;
   console.log(turn);
   if (turn === 1) {
@@ -55,24 +56,32 @@ function removeFoodOption(event) {
   }
   else if (turn === 2) {
     console.log("player 2 is up!");
+    h2.textContent = "Player two, please eliminate the next option"
   }
     else if (turn === 3) {
       console.log("player 1 is up!");
+      h2.textContent = "Player one, please eliminate the next option"
     }
     else if (turn === 4) {
       console.log("player 2 is up!");
+      h2.textContent = "Player two, please eliminate the next option"
     }
     else if (turn === 5) {
       console.log("player 1 is up!");
+      h2.textContent = "Player one, please eliminate the next option"
     }
     else if (turn === 6) {
       console.log("player 2 is up! (last turn!)");
+      h2.textContent = "Player two, please eliminate the LAST option"
       }
       else if (turn === 7) {
         console.log("GAME OVER");
+        h2.textContent = "Tonight You Will Dine On:"
         var finalOption = document.querySelector(".foodOption");
         finalOption.setAttribute("class", "final-option");
         finalOption.removeEventListener("click", removeFoodOption);
+        var finalHeading = document.querySelector("h1");
+        finalHeading.textContent = "IT HAS BEEN DECIDED!";
         }
 
 
