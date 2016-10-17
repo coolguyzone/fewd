@@ -50,3 +50,11 @@ h1, h2 {
 .hidden {
   display: none;
 }
+
+.shuffle {
+  color: white;
+  text-align: center;
+  font-size: 1.3em;
+  text-decoration: underline;
+  cursor: pointer;
+}
