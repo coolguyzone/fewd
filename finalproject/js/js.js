@@ -31,12 +31,90 @@ for (var i = 0; i < colorStopLimit; i++) {
 
 function addFoodOptions() {
   for (var i = 0; i < 7; i++) {
+
+    if (i === 0) {
     var newDiv = document.createElement("div");
     newDiv.setAttribute("class", "foodOption");
+    newDiv.classList.add('animated');
+    newDiv.classList.add('bounceInLeft');
+
     newDiv.style.backgroundColor=randoColors[i];
     var thisFood = randoFoods[i];
     newDiv.textContent = thisFood;
     document.querySelector(".allOptions").appendChild(newDiv);
+    }
+
+    else if(i === 1) {
+      var newDiv = document.createElement("div");
+      newDiv.setAttribute("class", "foodOption");
+      newDiv.classList.add('animated');
+      newDiv.classList.add('bounceInRight');
+
+      newDiv.style.backgroundColor=randoColors[i];
+      var thisFood = randoFoods[i];
+      newDiv.textContent = thisFood;
+      document.querySelector(".allOptions").appendChild(newDiv);
+    }
+
+    else if(i === 2) {
+      var newDiv = document.createElement("div");
+      newDiv.setAttribute("class", "foodOption");
+      newDiv.classList.add('animated');
+      newDiv.classList.add('bounceInLeft');
+
+      newDiv.style.backgroundColor=randoColors[i];
+      var thisFood = randoFoods[i];
+      newDiv.textContent = thisFood;
+      document.querySelector(".allOptions").appendChild(newDiv);
+    }
+
+    else if(i === 3) {
+      var newDiv = document.createElement("div");
+      newDiv.setAttribute("class", "foodOption");
+      newDiv.classList.add('animated');
+      newDiv.classList.add('bounceInRight');
+
+      newDiv.style.backgroundColor=randoColors[i];
+      var thisFood = randoFoods[i];
+      newDiv.textContent = thisFood;
+      document.querySelector(".allOptions").appendChild(newDiv);
+    }
+
+    else if(i === 4) {
+      var newDiv = document.createElement("div");
+      newDiv.setAttribute("class", "foodOption");
+      newDiv.classList.add('animated');
+      newDiv.classList.add('bounceInLeft');
+
+      newDiv.style.backgroundColor=randoColors[i];
+      var thisFood = randoFoods[i];
+      newDiv.textContent = thisFood;
+      document.querySelector(".allOptions").appendChild(newDiv);
+    }
+
+    else if(i === 5) {
+      var newDiv = document.createElement("div");
+      newDiv.setAttribute("class", "foodOption");
+      newDiv.classList.add('animated');
+      newDiv.classList.add('bounceInRight');
+
+      newDiv.style.backgroundColor=randoColors[i];
+      var thisFood = randoFoods[i];
+      newDiv.textContent = thisFood;
+      document.querySelector(".allOptions").appendChild(newDiv);
+    }
+
+    else if(i === 6) {
+      var newDiv = document.createElement("div");
+      newDiv.setAttribute("class", "foodOption");
+      newDiv.classList.add('animated');
+      newDiv.classList.add('bounceInLeft');
+
+      newDiv.style.backgroundColor=randoColors[i];
+      var thisFood = randoFoods[i];
+      newDiv.textContent = thisFood;
+      document.querySelector(".allOptions").appendChild(newDiv);
+    }
   }
 }
 
@@ -46,7 +124,7 @@ var turn = 1;
 console.log("Player 1 is up (first turn)");
 
 function removeFoodOption(event) {
-  event.target.setAttribute("class", "hidden");
+  event.target.classList.add("hidden");
   var h2 = document.querySelector("h2");
   turn = turn + 1;
   console.log(turn);
@@ -122,11 +200,16 @@ shuffle.addEventListener("click", shuffleFoods);
 
 //OPEN ISSUES:
 //After a few shuffles, we start running out of colors and eventually run out of food options . . .
+//-less than perfect fix: add more colors and foods to allow more shuffles before running out of options
+//-less than perfect fix: have the whole process start over with a new array on each shuffle(but you would get repeat foods)
 
 //Would be nice to have some animations upon removeFoodOption rather than just having the DIVs dissappear
 
 //Could make the messaging if/else statement more concise using modulos
 
+//Make sizes work better on desktop and mobile, perhaps using media queries?
+
+//How can I make the DIVs animate before disappearing off the screen?
 
 
 //CLOSED ISSUES:

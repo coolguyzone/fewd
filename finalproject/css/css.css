@@ -28,7 +28,10 @@ h1, h2 {
   text-shadow: 2px 2px 2px black;
   /*cursor pointer makes the mouse cursor into a hand over the divs*/
   cursor: pointer;
+
 }
+
+
 
 .final-option {
   width: 450px;
