@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+h1, h2 {
+  color: white;
+  text-align: center;
+}
+
+.foodOption {
+  /*width: 450px;
+  height: 105px;*/
+  /*line height same as height makes text vertically centered*/
+  /*line-height: 105px;*/
+  /*setting margin left and right auto horizontally centers divs*/
+  width: 675px;
+  height: 156px;
+  line-height: 156px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2.8em;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: white;
+  border-radius: 10px;
+  text-shadow: 2px 2px 2px black;
+  /*cursor pointer makes the mouse cursor into a hand over the divs*/
+  cursor: pointer;
+
+}
+
+
+
+.final-option {
+  width: 450px;
+  height: 105px;
+  line-height: 105px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2.8em;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: white;
+  border-radius: 10px;
+  text-shadow: 2px 2px 2px black;
+
+}
+
+/*hidden class is for divs that have been eliminated from options*/
+.hidden {
+  display: none;
+}
+
+.shuffle {
+  color: white;
+  text-align: center;
+  font-size: 1.3em;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/*Media queries for desktop vs mobile*/
+/*Desktop sizes*/
+
+@media only screen and (min-device-width: 800px) {
+  .foodOption {
+    width: 500px;
+    height: 79px;
+    line-height: 79px;
+  }
+}
