@@ -69,15 +69,20 @@ var turn = 1;
 console.log("Player 1 is up (first turn)");
 
 function removeFoodOption(event) {
+  $(event.target).addClass('animated rollOut');
+  $(event.target).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', hide);
+
+  function hide() {
   event.target.setAttribute("class", "hidden");
+  }
   var h2 = document.querySelector("h2");
   turn = turn + 1;
   console.log(turn);
 
-  if (turn === 7) {
+  if (turn === 7 ) {
     console.log("GAME OVER");
     h2.textContent = "Tonight You Will Dine On:"
-    var finalOption = document.querySelector(".foodOption");
+    var finalOption = document.querySelector(".foodOption:not(.rollOut)");
     finalOption.setAttribute("class", "final-option");
     finalOption.removeEventListener("click", removeFoodOption);
     var finalHeading = document.querySelector("h1");
@@ -101,6 +106,7 @@ function removeFoodOption(event) {
     console.log("player 1 is up!");
     h2.textContent = "Player one, please eliminate the next option"
   }
+
 }
 
 
@@ -181,3 +187,10 @@ shuffle.addEventListener("click", shuffleFoods);
 
 //Finish adding emojis
   //*emojis added
+
+
+
+
+  //have colors start from scratch on refresh
+  //instead of yelp api try using a google search
+  //google places/maps api
