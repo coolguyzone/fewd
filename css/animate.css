@@ -469,8 +469,8 @@
 .tada {
   -webkit-animation-name: tada;
   animation-name: tada;
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
 }
 
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */

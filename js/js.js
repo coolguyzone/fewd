@@ -166,6 +166,10 @@ shuffle.addEventListener("click", shuffleFoods);
 
 //How can I make the DIVs animate before disappearing off the screen?
 
+//Add a 'start over' button at the end
+
+//Make the game playable for more than 2 players
+
 
 //CLOSED ISSUES:
 //How can you make the food options not repeat?
