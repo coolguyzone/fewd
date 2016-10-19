@@ -121,26 +121,27 @@ for (var i = 0; i < options.length; i++) {
 
 function shuffleFoods(event) {
   //make all the options class of hidden
-  var foodOptions = document.querySelectorAll(".foodOption");
-  for (var i = 0; i < foodOptions.length; i++) {
-    foodOptions[i].setAttribute("class", "hidden");
-  }
-//display a new set of options with the next 7 items in the array:
-  for (var i = 1; i < 8; i++) {
-    var newDiv = document.createElement("div");
-    newDiv.setAttribute("class", "foodOption");
-    newDiv.style.backgroundColor=randoColors[(7 * shuffleCount) + i];
-    var thisFood = randoFoods[(7 * shuffleCount) + i];
-    newDiv.textContent = thisFood;
-    document.querySelector(".allOptions").appendChild(newDiv);
-    var options = document.querySelectorAll(".foodOption");
-    for (var i = 0; i < options.length; i++) {
-      options[i].addEventListener("click", removeFoodOption);
+//   var foodOptions = document.querySelectorAll(".foodOption");
+//   for (var i = 0; i < foodOptions.length; i++) {
+//     foodOptions[i].setAttribute("class", "hidden");
+//   }
+// //display a new set of options with the next 7 items in the array:
+//   for (var i = 1; i < 8; i++) {
+//     var newDiv = document.createElement("div");
+//     newDiv.setAttribute("class", "foodOption");
+//     newDiv.style.backgroundColor=randoColors[(7 * shuffleCount) + i];
+//     var thisFood = randoFoods[(7 * shuffleCount) + i];
+//     newDiv.textContent = thisFood;
+//     document.querySelector(".allOptions").appendChild(newDiv);
+//     var options = document.querySelectorAll(".foodOption");
+//     for (var i = 0; i < options.length; i++) {
+//       options[i].addEventListener("click", removeFoodOption);
+//
+//     }
+//   }
+//   shuffleCount = shuffleCount + 1;
 
-    }
-  }
-  shuffleCount = shuffleCount + 1;
-
+location.reload();
 
 }
 
