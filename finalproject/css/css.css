@@ -68,7 +68,7 @@ h1, h2 {
 /*Media queries for desktop vs mobile*/
 /*Desktop sizes*/
 
-@media (min-width: 800px) {
+@media only screen and (min-device-width: 800px) {
   .foodOption {
     width: 500px;
     height: 79px;
