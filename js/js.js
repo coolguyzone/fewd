@@ -170,6 +170,8 @@ shuffle.addEventListener("click", shuffleFoods);
 
 //Make the game playable for more than 2 players
 
+//Add a copyright
+
 
 //CLOSED ISSUES:
 //How can you make the food options not repeat?
