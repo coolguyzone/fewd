@@ -3,10 +3,7 @@
 
 //Finish this list
 var foods = ["🍚 Chinese", "🍲 Thai", "🍜 Vietnamese", "🇲🇽 Mexican", "🇲🇽 Tacos", "🇲🇽 Burritos", "🍔 Burgers", "🍞 Sandwiches", "🍕 Pizza", "🍕 Deep-Dish Pizza", "🇨🇳 Dim Sum", "🍣 Sushi", "🍜 Ramen", "🍜 Pho", "🍖 Steak", "🍳 Diner Breakfast", "🍲 Mediterranean", "🍖 Gyros", "🍱 Japanese", "🍌 Acai Bowls", "🍗 Rotisserie Chicken", "🍛 Food Court", "🇩🇪 German", "🍞 Subs", "🇮🇳 Indian", "🍝 Pasta", "🍲 Burmese", "🇮🇱 Jewish Deli", "🍖 Barbecue", "🍖 Ribs", "🍛 Korean", "🍛 African", "🍗 Fried Chicken", "🍅 Salad", "🐠 Seafood", "🍤 Shrimp", "🐟 Fish", "🐠🍟 Fish N' Chips", "🍺🍗 Pub Grub", "🇵🇷 Caribbean", "🌽🐶 Corn Dogs", "🇫🇷 French", "🇪🇸 Spanish", "🍗 Soul Food", "🍗 Wings", "🍛 Greek", "🇮🇱 Falaafel", "☕️ Greasy Spoon"]
-
 var colors = ["purple", "blue", "darkblue", "orange", "pink", "red", "brown", "green", "blueviolet", "cyan", "fuchsia", "lightsalmon", "lime", "lawngreen", "mediumslateblue", "palevioletred", "peachpuff", "peru", "lightblue", "goldenrod", "gold", "darkviolet", "darkmagenta"]
-
-
 var randoFoods = [];
 var randoColors = [];
 var foodStopLimit = foods.length;
@@ -15,10 +12,10 @@ var shuffle = document.querySelector(".shuffle");
 var shuffleCount = 1;
 
 
-  for (var i = 0; i < foodStopLimit; i++) {
-    var randoFoodIndex = Math.floor(Math.random() * foods.length);
-    randoFoods.push(foods[randoFoodIndex]);
-    var removedFoods = foods.splice(randoFoodIndex, 1)[0];
+for (var i = 0; i < foodStopLimit; i++) {
+  var randoFoodIndex = Math.floor(Math.random() * foods.length);
+  randoFoods.push(foods[randoFoodIndex]);
+  var removedFoods = foods.splice(randoFoodIndex, 1)[0];
 }
 
 for (var i = 0; i < colorStopLimit; i++) {
@@ -31,85 +28,33 @@ for (var i = 0; i < colorStopLimit; i++) {
 
 function addFoodOptions() {
   for (var i = 0; i < 7; i++) {
-
     if (i === 0) {
     var newDiv = document.createElement("div");
     newDiv.setAttribute("class", "foodOption");
     newDiv.classList.add('animated');
     newDiv.classList.add('bounceInLeft');
-
     newDiv.style.backgroundColor=randoColors[i];
     var thisFood = randoFoods[i];
     newDiv.textContent = thisFood;
     document.querySelector(".allOptions").appendChild(newDiv);
     }
 
-    else if(i === 1) {
-      var newDiv = document.createElement("div");
-      newDiv.setAttribute("class", "foodOption");
-      newDiv.classList.add('animated');
-      newDiv.classList.add('bounceInRight');
-
-      newDiv.style.backgroundColor=randoColors[i];
-      var thisFood = randoFoods[i];
-      newDiv.textContent = thisFood;
-      document.querySelector(".allOptions").appendChild(newDiv);
-    }
-
-    else if(i === 2) {
+    else if (i % 2 === 0) {
       var newDiv = document.createElement("div");
       newDiv.setAttribute("class", "foodOption");
       newDiv.classList.add('animated');
       newDiv.classList.add('bounceInLeft');
-
       newDiv.style.backgroundColor=randoColors[i];
       var thisFood = randoFoods[i];
       newDiv.textContent = thisFood;
       document.querySelector(".allOptions").appendChild(newDiv);
     }
 
-    else if(i === 3) {
+    else {
       var newDiv = document.createElement("div");
       newDiv.setAttribute("class", "foodOption");
       newDiv.classList.add('animated');
       newDiv.classList.add('bounceInRight');
-
-      newDiv.style.backgroundColor=randoColors[i];
-      var thisFood = randoFoods[i];
-      newDiv.textContent = thisFood;
-      document.querySelector(".allOptions").appendChild(newDiv);
-    }
-
-    else if(i === 4) {
-      var newDiv = document.createElement("div");
-      newDiv.setAttribute("class", "foodOption");
-      newDiv.classList.add('animated');
-      newDiv.classList.add('bounceInLeft');
-
-      newDiv.style.backgroundColor=randoColors[i];
-      var thisFood = randoFoods[i];
-      newDiv.textContent = thisFood;
-      document.querySelector(".allOptions").appendChild(newDiv);
-    }
-
-    else if(i === 5) {
-      var newDiv = document.createElement("div");
-      newDiv.setAttribute("class", "foodOption");
-      newDiv.classList.add('animated');
-      newDiv.classList.add('bounceInRight');
-
-      newDiv.style.backgroundColor=randoColors[i];
-      var thisFood = randoFoods[i];
-      newDiv.textContent = thisFood;
-      document.querySelector(".allOptions").appendChild(newDiv);
-    }
-
-    else if(i === 6) {
-      var newDiv = document.createElement("div");
-      newDiv.setAttribute("class", "foodOption");
-      newDiv.classList.add('animated');
-      newDiv.classList.add('bounceInLeft');
-
       newDiv.style.backgroundColor=randoColors[i];
       var thisFood = randoFoods[i];
       newDiv.textContent = thisFood;
@@ -128,9 +73,17 @@ function removeFoodOption(event) {
   var h2 = document.querySelector("h2");
   turn = turn + 1;
   console.log(turn);
-  if (turn === 1) {
-    console.log("player 1 is up!");
-  }
+
+  if (turn === 7) {
+    console.log("GAME OVER");
+    h2.textContent = "Tonight You Will Dine On:"
+    var finalOption = document.querySelector(".foodOption");
+    finalOption.setAttribute("class", "final-option");
+    finalOption.removeEventListener("click", removeFoodOption);
+    var finalHeading = document.querySelector("h1");
+    finalHeading.textContent = "IT HAS BEEN DECIDED!";
+    }
+
   else if (turn === 2) {
     console.log("player 2 is up!");
     h2.textContent = "Player two, please eliminate the next option"
@@ -138,31 +91,16 @@ function removeFoodOption(event) {
     console.log("test!");
     shuffle.setAttribute("class", "hidden");
   }
-    else if (turn === 3) {
-      console.log("player 1 is up!");
-      h2.textContent = "Player one, please eliminate the next option"
-    }
-    else if (turn === 4) {
-      console.log("player 2 is up!");
-      h2.textContent = "Player two, please eliminate the next option"
-    }
-    else if (turn === 5) {
-      console.log("player 1 is up!");
-      h2.textContent = "Player one, please eliminate the next option"
-    }
-    else if (turn === 6) {
-      console.log("player 2 is up! (last turn!)");
-      h2.textContent = "Player two, please eliminate the LAST option"
-      }
-      else if (turn === 7) {
-        console.log("GAME OVER");
-        h2.textContent = "Tonight You Will Dine On:"
-        var finalOption = document.querySelector(".foodOption");
-        finalOption.setAttribute("class", "final-option");
-        finalOption.removeEventListener("click", removeFoodOption);
-        var finalHeading = document.querySelector("h1");
-        finalHeading.textContent = "IT HAS BEEN DECIDED!";
-        }
+
+  else if (turn % 2 === 0) {
+    console.log("player 2 is up!");
+    h2.textContent = "Player two, please eliminate the next option"
+  }
+
+  else {
+    console.log("player 1 is up!");
+    h2.textContent = "Player one, please eliminate the next option"
+  }
 }
 
 
@@ -193,7 +131,7 @@ function shuffleFoods(event) {
     for (var i = 0; i < options.length; i++) {
       options[i].addEventListener("click", removeFoodOption);
 
-      }
+    }
   }
   shuffleCount = shuffleCount + 1;
 
