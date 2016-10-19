@@ -12,11 +12,14 @@ h1, h2 {
 }
 
 .foodOption {
-  width: 450px;
-  height: 105px;
+  /*width: 450px;
+  height: 105px;*/
   /*line height same as height makes text vertically centered*/
-  line-height: 105px;
+  /*line-height: 105px;*/
   /*setting margin left and right auto horizontally centers divs*/
+  width: 675px;
+  height: 156px;
+  line-height: 156px;
   margin-left: auto;
   margin-right: auto;
   font-size: 2.8em;
@@ -60,4 +63,15 @@ h1, h2 {
   font-size: 1.3em;
   text-decoration: underline;
   cursor: pointer;
+}
+
+/*Media queries for desktop vs mobile*/
+/*Desktop sizes*/
+
+@media (min-width: 800px) {
+  .foodOption {
+    width: 500px;
+    height: 79px;
+    line-height: 79px;
+  }
 }
