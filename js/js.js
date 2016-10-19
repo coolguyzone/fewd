@@ -106,6 +106,7 @@ function removeFoodOption(event) {
     console.log("player 1 is up!");
     h2.textContent = "Player one, please eliminate the next option"
   }
+  $(finalOption).addClass('animated tada');
 
 }
 
