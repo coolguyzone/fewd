@@ -179,8 +179,9 @@ shuffle.addEventListener("click", shuffleFoods);
 
 //Add recipe suggestions?
 
-//Add a restart button
-  //*Added another shuffle link at the end of the game
+//Animations seem a little slow, can they be sped up?
+
+
 
 
 
@@ -202,6 +203,9 @@ shuffle.addEventListener("click", shuffleFoods);
 
 //Set the height of the text on the divs to the middle
   //*set line-height equal to height of div
+
+  //Add a restart button
+    //*Added another shuffle link at the end of the game
 
 //Finish adding emojis
   //*emojis added
