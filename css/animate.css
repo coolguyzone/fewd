@@ -874,6 +874,7 @@
 .bounceInLeft {
   -webkit-animation-name: bounceInLeft;
   animation-name: bounceInLeft;
+
 }
 
 @-webkit-keyframes bounceInRight {
@@ -947,6 +948,8 @@
 .bounceInRight {
   -webkit-animation-name: bounceInRight;
   animation-name: bounceInRight;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
 }
 
 @-webkit-keyframes bounceInUp {
