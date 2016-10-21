@@ -2,7 +2,272 @@
 
 
 //Finish this list
-var foods = ["🍚 Chinese", "🍲 Thai", "🍜 Vietnamese", "🇲🇽 Mexican", "🇲🇽 Tacos", "🇲🇽 Burritos", "🍔 Burgers", "🍞 Sandwiches", "🍕 Pizza", "🍕 Deep-Dish Pizza", "🇨🇳 Dim Sum", "🍣 Sushi", "🍜 Ramen", "🍜 Pho", "🍖 Steak", "🍳 Diner Breakfast", "🍲 Mediterranean", "🍖 Gyros", "🍱 Japanese", "🍌 Acai Bowls", "🍗 Rotisserie Chicken", "🍛 Food Court", "🇩🇪 German", "🍞 Subs", "🇮🇳 Indian", "🍝 Pasta", "🍲 Burmese", "🇮🇱 Jewish Deli", "🍖 Barbecue", "🍖 Ribs", "🍛 Korean", "🍛 African", "🍗 Fried Chicken", "🍅 Salad", "🐠 Seafood", "🍤 Shrimp", "🐟 Fish", "🐠🍟 Fish N' Chips", "🍺🍗 Pub Grub", "🇵🇷 Caribbean", "🌽🐶 Corn Dogs", "🇫🇷 French", "🇪🇸 Spanish", "🍗 Soul Food", "🍗 Wings", "🍛 Greek", "🇮🇱 Falaafel", "☕️ Greasy Spoon"]
+
+var foods = [
+  {
+    name: "Burgers",
+    category: "burgers",
+    emoji: "🍔"
+  },
+  {
+    name: "Tacos",
+    category: "mexican",
+    emoji: "🇲🇽"
+  },
+  {
+    name: "Chinese",
+    category: "chinese",
+    emoji: "🍚"
+  },
+  {
+    name: "Thai",
+    category: "thai",
+    emoji: "🍲"
+  },
+  {
+    name: "Vietnamese",
+    category: "vietnamese",
+    emoji: "🍜"
+  },
+  {
+    name: "Mexican",
+    category: "mexican",
+    emoji: "🇲🇽"
+  },
+  {
+    name: "Burritos",
+    category: "mexican",
+    emoji: "🇲🇽"
+  },
+  {
+    name: "Sandwiches",
+    category: "sandwiches",
+    emoji: "🍞"
+  },
+  {
+    name: "Pizza",
+    category: "italian",
+    emoji: "🍕"
+  },
+  {
+    name: "Deep-Dish Pizza",
+    category: "italian",
+    emoji: "🍕"
+  },
+  {
+    name: "Dim Sum",
+    category: "chinese",
+    emoji: "🇨🇳"
+  },
+  {
+    name: "Sushi",
+    category: "japanese",
+    emoji: "🍣"
+  },
+  {
+    name: "Ramen",
+    category: "japanese",
+    emoji: "🍜"
+  },
+  {
+    name: "Pho",
+    category: "vietnamese",
+    emoji: "🍜"
+  },
+  {
+    name: "Steak",
+    category: "meat",
+    emoji: "🍖"
+  },
+  {
+    name: "Diner Breakfast",
+    category: "breakfast",
+    emoji: "🍳"
+  },
+  {
+    name: "Mediterranean",
+    category: "mediterranean",
+    emoji: "🍲"
+  },
+  {
+    name: "Gyros",
+    category: "mediterranean",
+    emoji: "🍖"
+  },
+  {
+    name: "Japanese",
+    category: "japanese",
+    emoji: "🍱"
+  },
+  {
+    name: "Acai Bowls",
+    category: "raw",
+    emoji: "🍌"
+  },
+  {
+    name: "Rotisserie Chicken",
+    category: "chicken",
+    emoji: "🍗"
+  },
+  {
+    name: "Food Court",
+    category: "variety",
+    emoji: "🍛"
+  },
+  {
+    name: "German",
+    category: "german",
+    emoji: "🇩🇪"
+  },
+  {
+    name: "Subs",
+    category: "sandwiches",
+    emoji: "🍞"
+  },
+  {
+    name: "Indian",
+    category: "indian",
+    emoji: "🇮🇳"
+  },
+  {
+    name: "Curry",
+    category: "indian",
+    emoji: "🇮🇳"
+  },
+  {
+    name: "Pasta",
+    category: "italian",
+    emoji: "🍝"
+  },
+  {
+    name: "Italian",
+    category: "italian",
+    emoji: "🍝"
+  },
+  {
+    name: "Burmese",
+    category: "chinese",
+    emoji: "🍲"
+  },
+  {
+    name: "Jewish Deli",
+    category: "deli",
+    emoji: "🇮🇱"
+  },
+  {
+    name: "Barbecue",
+    category: "meat",
+    emoji: "🍖"
+  },
+  {
+    name: "Ribs",
+    category: "meat",
+    emoji: "🍖"
+  },
+  {
+    name: "Korean",
+    category: "korean",
+    emoji: "🍛"
+  },
+  {
+    name: "African",
+    category: "african",
+    emoji: "🍛"
+  },
+  {
+    name: "Fried Chicken",
+    category: "Chicken",
+    emoji: "🍗"
+  },
+  {
+    name: "Salads",
+    category: "raw",
+    emoji: "🍅"
+  },
+  {
+    name: "Seafood",
+    category: "seafood",
+    emoji: "🐠"
+  },
+  {
+    name: "Shrimp",
+    category: "seafood",
+    emoji: "🍤"
+  },
+  {
+    name: "Fish",
+    category: "seafood",
+    emoji: "🐟"
+  },
+  {
+    name: "Fish N' Chips'",
+    category: "seafood",
+    emoji: "🐠🍟"
+  },
+  {
+    name: "Pub Grub",
+    category: "irish",
+    emoji: "🍺🍗"
+  },
+  {
+    name: "Caribbean",
+    category: "caribbean",
+    emoji: "🇵🇷"
+  },
+  {
+    name: "Corn Dogs",
+    category: "sausages",
+    emoji: "🌽🐶"
+  },
+  {
+    name: "French",
+    category: "french",
+    emoji: "🇫🇷"
+  },
+  {
+    name: "Spanish",
+    category: "spanish",
+    emoji: "🇪🇸"
+  },
+  {
+    name: "Paella",
+    category: "spanish",
+    emoji: "🇪🇸"
+  },
+  {
+    name: "Tapas",
+    category: "spanish",
+    emoji: "🇪🇸"
+  },
+  {
+    name: "Soul Food",
+    category: "soul food",
+    emoji: "🍗"
+  },
+  {
+    name: "Wings",
+    category: "chicken",
+    emoji: "🍗"
+  },
+  {
+    name: "Greek",
+    category: "mediterranean",
+    emoji: "🍛"
+  },
+  {
+    name: "Falafel",
+    category: "mediterranean",
+    emoji: "🇮🇱"
+  },
+  {
+    name: "Greasy Spoon",
+    category: "breakfast",
+    emoji: "☕️"
+  }
+]
+
+
+// var foods = ["🍚 Chinese", "🍲 Thai", "🍜 Vietnamese", "🇲🇽 Mexican", "🇲🇽 Tacos", "🇲🇽 Burritos", "🍔 Burgers", "🍞 Sandwiches", "🍕 Pizza", "🍕 Deep-Dish Pizza", "🇨🇳 Dim Sum", "🍣 Sushi", "🍜 Ramen", "🍜 Pho", "🍖 Steak", "🍳 Diner Breakfast", "🍲 Mediterranean", "🍖 Gyros", "🍱 Japanese", "🍌 Acai Bowls", "🍗 Rotisserie Chicken", "🍛 Food Court", "🇩🇪 German", "🍞 Subs", "🇮🇳 Indian", "🍝 Pasta", "🍲 Burmese", "🇮🇱 Jewish Deli", "🍖 Barbecue", "🍖 Ribs", "🍛 Korean", "🍛 African", "🍗 Fried Chicken", "🍅 Salad", "🐠 Seafood", "🍤 Shrimp", "🐟 Fish", "🐠🍟 Fish N' Chips", "🍺🍗 Pub Grub", "🇵🇷 Caribbean", "🌽🐶 Corn Dogs", "🇫🇷 French", "🇪🇸 Spanish", "🍗 Soul Food", "🍗 Wings", "🍛 Greek", "🇮🇱 Falaafel", "☕️ Greasy Spoon"]
 var colors = ["purple", "blue", "darkblue", "orange", "pink", "red", "brown", "green", "blueviolet", "cyan", "fuchsia", "lightsalmon", "lime", "lawngreen", "mediumslateblue", "palevioletred", "peachpuff", "peru", "lightblue", "goldenrod", "gold", "darkviolet", "darkmagenta"]
 var randoFoods = [];
 var randoColors = [];
@@ -35,7 +300,7 @@ function addFoodOptions() {
     newDiv.classList.add('bounceInLeft');
     newDiv.style.backgroundColor=randoColors[i];
     var thisFood = randoFoods[i];
-    newDiv.textContent = thisFood;
+    newDiv.textContent = thisFood.emoji + " " + thisFood.name;
     document.querySelector(".allOptions").appendChild(newDiv);
     }
 
@@ -46,7 +311,7 @@ function addFoodOptions() {
       newDiv.classList.add('bounceInLeft');
       newDiv.style.backgroundColor=randoColors[i];
       var thisFood = randoFoods[i];
-      newDiv.textContent = thisFood;
+      newDiv.textContent = thisFood.emoji + " " + thisFood.name;
       document.querySelector(".allOptions").appendChild(newDiv);
     }
 
@@ -57,7 +322,7 @@ function addFoodOptions() {
       newDiv.classList.add('bounceInRight');
       newDiv.style.backgroundColor=randoColors[i];
       var thisFood = randoFoods[i];
-      newDiv.textContent = thisFood;
+      newDiv.textContent = thisFood.emoji + " " + thisFood.name;
       document.querySelector(".allOptions").appendChild(newDiv);
     }
   }
