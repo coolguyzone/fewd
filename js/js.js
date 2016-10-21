@@ -176,7 +176,7 @@ var foods = [
   },
   {
     name: "Fried Chicken",
-    category: "Chicken",
+    category: "chicken",
     emoji: "🍗"
   },
   {
@@ -267,10 +267,11 @@ var foods = [
 ]
 
 
-// var foods = ["🍚 Chinese", "🍲 Thai", "🍜 Vietnamese", "🇲🇽 Mexican", "🇲🇽 Tacos", "🇲🇽 Burritos", "🍔 Burgers", "🍞 Sandwiches", "🍕 Pizza", "🍕 Deep-Dish Pizza", "🇨🇳 Dim Sum", "🍣 Sushi", "🍜 Ramen", "🍜 Pho", "🍖 Steak", "🍳 Diner Breakfast", "🍲 Mediterranean", "🍖 Gyros", "🍱 Japanese", "🍌 Acai Bowls", "🍗 Rotisserie Chicken", "🍛 Food Court", "🇩🇪 German", "🍞 Subs", "🇮🇳 Indian", "🍝 Pasta", "🍲 Burmese", "🇮🇱 Jewish Deli", "🍖 Barbecue", "🍖 Ribs", "🍛 Korean", "🍛 African", "🍗 Fried Chicken", "🍅 Salad", "🐠 Seafood", "🍤 Shrimp", "🐟 Fish", "🐠🍟 Fish N' Chips", "🍺🍗 Pub Grub", "🇵🇷 Caribbean", "🌽🐶 Corn Dogs", "🇫🇷 French", "🇪🇸 Spanish", "🍗 Soul Food", "🍗 Wings", "🍛 Greek", "🇮🇱 Falaafel", "☕️ Greasy Spoon"]
+
 var colors = ["purple", "blue", "darkblue", "orange", "pink", "red", "brown", "green", "blueviolet", "cyan", "fuchsia", "lightsalmon", "lime", "lawngreen", "mediumslateblue", "palevioletred", "peachpuff", "peru", "lightblue", "goldenrod", "gold", "darkviolet", "darkmagenta"]
 var randoFoods = [];
 var randoColors = [];
+var categories = [];
 var foodStopLimit = foods.length;
 var colorStopLimit = colors.length;
 var shuffle = document.querySelector(".shuffle");
@@ -279,9 +280,26 @@ var shuffleCount = 1;
 
 for (var i = 0; i < foodStopLimit; i++) {
   var randoFoodIndex = Math.floor(Math.random() * foods.length);
+
+  category = foods[randoFoodIndex].category;
+  console.log(category);
+
+  if($.inArray( category, categories )>=0){
+
+     // code for true condition
+}else{
+  categories.push(category);
   randoFoods.push(foods[randoFoodIndex]);
+
   var removedFoods = foods.splice(randoFoodIndex, 1)[0];
 }
+
+     // code for false condition
+}
+
+
+
+
 
 for (var i = 0; i < colorStopLimit; i++) {
   var randoColorIndex = Math.floor(Math.random() * colors.length);
