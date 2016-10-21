@@ -445,16 +445,10 @@ shuffle.addEventListener("click", shuffleFoods);
 
 //OPEN ISSUES:
 
-//Make sizes work better on desktop and mobile, perhaps using media queries?
-  //*added media queries, still unsure if sizes are optimal
-
-
-//Add a 'start over' button at the end
 
 //Make the game playable for more than 2 players
 
-//Add a copyright
-  //*added a copyright, but not thrilled with the way it looks
+
 
 //Decide on a color scheme
 
@@ -462,7 +456,6 @@ shuffle.addEventListener("click", shuffleFoods);
 
 //Add recipe suggestions?
 
-//Animations seem a little slow, can they be sped up?
 
 
 
@@ -504,3 +497,16 @@ shuffle.addEventListener("click", shuffleFoods);
 
   //Could make the messaging if/else statement more concise using modulos
     //*Added modulos to minimize code
+
+  //Make sizes work better on desktop and mobile, perhaps using media queries?
+      //*added media queries, still unsure if sizes are optimal
+
+
+  //Add a 'start over' button at the end
+      //*added restart
+
+  //Add a copyright
+        //*added a copyright, but not thrilled with the way it looks
+
+  //Animations seem a little slow, can they be sped up?
+        //*sped up
