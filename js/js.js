@@ -319,6 +319,7 @@ function addFoodOptions() {
     newDiv.style.backgroundColor=randoColors[i];
     var thisFood = randoFoods[i];
     newDiv.textContent = thisFood.emoji + " " + thisFood.name;
+    newDiv.setAttribute("food-type", thisFood.name);
     document.querySelector(".allOptions").appendChild(newDiv);
     }
 
@@ -330,6 +331,7 @@ function addFoodOptions() {
       newDiv.style.backgroundColor=randoColors[i];
       var thisFood = randoFoods[i];
       newDiv.textContent = thisFood.emoji + " " + thisFood.name;
+      newDiv.setAttribute("food-type", thisFood.name);
       document.querySelector(".allOptions").appendChild(newDiv);
     }
 
@@ -341,6 +343,7 @@ function addFoodOptions() {
       newDiv.style.backgroundColor=randoColors[i];
       var thisFood = randoFoods[i];
       newDiv.textContent = thisFood.emoji + " " + thisFood.name;
+      newDiv.setAttribute("food-type", thisFood.name);
       document.querySelector(".allOptions").appendChild(newDiv);
     }
   }
@@ -370,6 +373,22 @@ function removeFoodOption(event) {
     finalOption.removeEventListener("click", removeFoodOption);
     var finalHeading = document.querySelector("h1");
     finalHeading.textContent = "IT HAS BEEN DECIDED!";
+//add search option
+    var foodType = finalOption.getAttribute("food-type");
+    var searchLink = document.createElement("a");
+    searchLink.setAttribute("href", "https://www.google.com/#q=" + foodType + "+nearby");
+    document.querySelector(".allOptions").appendChild(searchLink);
+    var search = document.createElement("div");
+    search.setAttribute("class", "search");
+    search.classList.add('animated');
+    search.classList.add('bounceInLeft');
+
+    search.textContent = "🔎 Find " + foodType + " Near You";
+    searchLink.appendChild(search);
+
+
+
+
     var startOver = document.createElement("div");
     startOver.setAttribute("class", "shuffle");
     document.querySelector("main").appendChild(startOver);
@@ -447,6 +466,8 @@ shuffle.addEventListener("click", shuffleFoods);
 
 
 //Make the game playable for more than 2 players
+
+//Make the divs bounce out to opposite sides
 
 
 
