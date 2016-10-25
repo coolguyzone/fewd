@@ -268,7 +268,16 @@ var foods = [
 
 
 
-var colors = ["purple", "blue", "darkblue", "orange", "pink", "red", "brown", "green", "blueviolet", "cyan", "fuchsia", "lightsalmon", "lime", "lawngreen", "mediumslateblue", "palevioletred", "peachpuff", "peru", "lightblue", "goldenrod", "gold", "darkviolet", "darkmagenta"]
+var colors = [
+  "#deefb7",
+  "#98dfaf",
+  "#5fb49c",
+  "#414288",
+  "#682d63",
+  "#f068E4",
+  "#7a7cff"
+
+]
 var randoFoods = [];
 var randoColors = [];
 var categories = [];
@@ -355,17 +364,18 @@ var turn = 1;
 console.log("Player 1 is up (first turn)");
 
 function removeFoodOption(event) {
-  $(event.target).addClass('animated rollOut');
-  $(event.target).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', hide);
 
-  function hide() {
-  event.target.setAttribute("class", "hidden");
-  }
   var h2 = document.querySelector("h2");
   turn = turn + 1;
   console.log(turn);
 
   if (turn === 7 ) {
+    $(event.target).addClass('animated rollOut');
+    $(event.target).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', hide);
+
+    function hide() {
+    event.target.setAttribute("class", "hidden");
+    }
     console.log("GAME OVER");
     h2.textContent = "Tonight You Will Dine On:"
     var finalOption = document.querySelector(".foodOption:not(.rollOut)");
@@ -377,11 +387,9 @@ function removeFoodOption(event) {
     var foodType = finalOption.getAttribute("food-type");
     var searchLink = document.createElement("a");
     searchLink.setAttribute("href", "https://www.google.com/#q=" + foodType + "+nearby");
-    searchLink.setAttribute("target", "_blank");
     document.querySelector(".allOptions").appendChild(searchLink);
     var search = document.createElement("div");
     search.setAttribute("class", "search");
-
     search.classList.add('animated');
     search.classList.add('bounceInLeft');
 
@@ -401,6 +409,12 @@ function removeFoodOption(event) {
     }
 
   else if (turn === 2) {
+    $(event.target).addClass('animated fadeOutLeft');
+    $(event.target).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', hide);
+
+    function hide() {
+    event.target.setAttribute("class", "hidden");
+    }
     console.log("player 2 is up!");
     h2.textContent = "Player two, please eliminate the next option"
 //Eliminate shuffle after first turn has been taken
@@ -409,11 +423,23 @@ function removeFoodOption(event) {
   }
 
   else if (turn % 2 === 0) {
+    $(event.target).addClass('animated fadeOutLeft');
+    $(event.target).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', hide);
+
+    function hide() {
+    event.target.setAttribute("class", "hidden");
+    }
     console.log("player 2 is up!");
     h2.textContent = "Player two, please eliminate the next option"
   }
 
   else {
+    $(event.target).addClass('animated fadeOutRight');
+    $(event.target).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', hide);
+
+    function hide() {
+    event.target.setAttribute("class", "hidden");
+    }
     console.log("player 1 is up!");
     h2.textContent = "Player one, please eliminate the next option"
   }
@@ -470,16 +496,17 @@ shuffle.addEventListener("click", shuffleFoods);
 
 //Remove underline from search
 
-//Make search open in new tab
+
 
 
 //Make the game playable for more than 2 players
 
-//Make the divs bounce out to opposite sides
+
+//Fix animation timing issues
 
 
 
-//Decide on a color scheme
+
 
 //Turn this into an app
 
@@ -539,3 +566,12 @@ shuffle.addEventListener("click", shuffleFoods);
 
   //Animations seem a little slow, can they be sped up?
         //*sped up
+
+//Make search open in new tab
+    //*used target="_blank" to make link open in new tab.
+
+//Decide on a color scheme
+  //*picked and implemented a color scheme, not in love with it.
+
+  //Make the divs bounce out to opposite sides
+   //*changed the animations so that they alternate between left to right
