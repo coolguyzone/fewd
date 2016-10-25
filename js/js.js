@@ -377,9 +377,11 @@ function removeFoodOption(event) {
     var foodType = finalOption.getAttribute("food-type");
     var searchLink = document.createElement("a");
     searchLink.setAttribute("href", "https://www.google.com/#q=" + foodType + "+nearby");
+    searchLink.setAttribute("target", "_blank");
     document.querySelector(".allOptions").appendChild(searchLink);
     var search = document.createElement("div");
     search.setAttribute("class", "search");
+
     search.classList.add('animated');
     search.classList.add('bounceInLeft');
 
@@ -463,6 +465,12 @@ shuffle.addEventListener("click", shuffleFoods);
 
 
 //OPEN ISSUES:
+
+//Fix search size and text size ISSUES
+
+//Remove underline from search
+
+//Make search open in new tab
 
 
 //Make the game playable for more than 2 players
