@@ -121,15 +121,15 @@ var foods = [
     name: "Mediterranean",
     category: "mediterranean",
     emoji: "🍲",
-    recipelink: "",
-    recipename: ""
+    recipelink: "http://www.thekitchn.com/recipe-beef-kofta-with-tzatziki-229327",
+    recipename: "Beek Kofta"
   },
   {
     name: "Gyros",
     category: "mediterranean",
     emoji: "🍖",
-    recipelink: "http://www.thekitchn.com/recipe-beef-kofta-with-tzatziki-229327",
-    recipename: "Beek Kofta"
+    recipelink: "http://www.food.com/recipe/gyros-an-authentic-recipe-for-making-them-at-home-285900",
+    recipename: "Authentic Gyros"
   },
   {
     name: "Japanese",
