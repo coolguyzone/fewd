@@ -51,6 +51,9 @@ h1, h2 {
   text-decoration: none;
 }
 
+.allOptions a {
+  text-decoration: none;
+}
 
 
 .final-option {

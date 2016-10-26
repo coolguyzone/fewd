@@ -390,6 +390,7 @@ function removeFoodOption(event) {
       var foodType = finalOption.getAttribute("food-type");
       var searchLink = document.createElement("a");
       searchLink.setAttribute("href", "https://www.google.com/#q=" + foodType + "+nearby");
+      searchLink.setAttribute("target", "_blank");
       document.querySelector(".allOptions").appendChild(searchLink);
       var search = document.createElement("div");
       search.setAttribute("class", "search");
