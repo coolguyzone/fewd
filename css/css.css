@@ -34,13 +34,10 @@ h1, h2 {
 
 }
 
-.search {
+.search, .recipe{
   width: 675px;
-  height: 100px;
-  line-height: 100px;
   margin-left: auto;
   margin-right: auto;
-  font-size: 1.8em;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -49,6 +46,18 @@ h1, h2 {
   text-shadow: 2px 2px 2px black;
   background-color: grey;
   text-decoration: none;
+}
+
+.search {
+  height: 100px;
+  line-height: 100px;
+  font-size: 1.8em;
+}
+
+.recipe {
+  height: 150px;
+  line-height: 150px;
+  font-size: 1.4em;
 }
 
 .allOptions a {
@@ -96,18 +105,31 @@ h1, h2 {
     line-height: 79px;
   }
 
-  .search {
+  .search, .recipe {
     width: 500px;
     height: 42px;
     line-height: 42px;
 
   }
 
-}
+  .search {
+    height: 42px;
+    line-height: 42px;
+  }
+
+  .recipe {
+    height: 62px;
+    line-height: 62px;
+  }
+
+
+
 
 .copyright {
   color: white;
   position: fixed;
   bottom: 6px;
   left: 6px;
+}
+
 }

@@ -7,17 +7,23 @@ var foods = [
   {
     name: "Burgers",
     category: "burgers",
-    emoji: "🍔"
+    emoji: "🍔",
+    recipelink: "http://www.foodnetwork.com/recipes/alton-brown/burger-of-the-gods-recipe.html",
+    recipename: "Burger Of The Gods"
   },
   {
     name: "Tacos",
     category: "mexican",
-    emoji: "🇲🇽"
+    emoji: "🇲🇽",
+    recipelink: "http://www.epicurious.com/recipes/food/views/pork-carnitas-tacos",
+    recipename: "Double-Pork Carnitas Tacos"
   },
   {
     name: "Chinese",
     category: "chinese",
-    emoji: "🍚"
+    emoji: "🍚",
+    recipelink: "http://allrecipes.com/recipe/9027/kung-pao-chicken/",
+    recipename: "Kung Pao Chicken"
   },
   {
     name: "Thai",
@@ -329,6 +335,8 @@ function addFoodOptions() {
     var thisFood = randoFoods[i];
     newDiv.textContent = thisFood.emoji + " " + thisFood.name;
     newDiv.setAttribute("food-type", thisFood.name);
+    newDiv.setAttribute("recipe-link", thisFood.recipelink);
+    newDiv.setAttribute("recipe-name", thisFood.recipename);
     document.querySelector(".allOptions").appendChild(newDiv);
     }
 
@@ -341,6 +349,8 @@ function addFoodOptions() {
       var thisFood = randoFoods[i];
       newDiv.textContent = thisFood.emoji + " " + thisFood.name;
       newDiv.setAttribute("food-type", thisFood.name);
+      newDiv.setAttribute("recipe-link", thisFood.recipelink);
+      newDiv.setAttribute("recipe-name", thisFood.recipename);
       document.querySelector(".allOptions").appendChild(newDiv);
     }
 
@@ -353,6 +363,8 @@ function addFoodOptions() {
       var thisFood = randoFoods[i];
       newDiv.textContent = thisFood.emoji + " " + thisFood.name;
       newDiv.setAttribute("food-type", thisFood.name);
+      newDiv.setAttribute("recipe-link", thisFood.recipelink);
+      newDiv.setAttribute("recipe-name", thisFood.recipename);
       document.querySelector(".allOptions").appendChild(newDiv);
     }
   }
@@ -400,6 +412,25 @@ function removeFoodOption(event) {
       search.textContent = "🔎 Find " + foodType + " Near You";
       searchLink.appendChild(search);
     }
+//add recipes
+$(finalOption).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', addRecipe);
+
+function addRecipe() {
+  var foodType = finalOption.getAttribute("food-type");
+  var recipeLink = document.createElement("a");
+  var recipeUrl = finalOption.getAttribute("recipe-link");
+  var recipeName = finalOption.getAttribute("recipe-name");
+  recipeLink.setAttribute("href", recipeUrl);
+  recipeLink.setAttribute("target", "_blank");
+  document.querySelector(".allOptions").appendChild(recipeLink);
+  var recipe = document.createElement("div");
+  recipe.setAttribute("class", "recipe");
+  recipe.classList.add('animated');
+  recipe.classList.add('bounceInRight');
+
+  recipe.textContent = "Rather Cook? Try This " + recipeName + " Recipe";
+  recipeLink.appendChild(recipe);
+}
 
 
 
