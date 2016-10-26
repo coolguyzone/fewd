@@ -381,7 +381,6 @@ var colors = [
   "#682d63",
   "#f068E4",
   "#7a7cff"
-
 ]
 var randoFoods = [];
 var randoColors = [];
@@ -401,7 +400,7 @@ for (var i = 0; i < foodStopLimit; i++) {
   if($.inArray( category, categories )>=0){
 
      // code for true condition
-}else{
+} else{
   categories.push(category);
   randoFoods.push(foods[randoFoodIndex]);
 
@@ -481,7 +480,7 @@ function removeFoodOption(event) {
   console.log(turn);
 
   if (turn === 7 ) {
-    $(event.target).addClass('animated rollOut');
+    $(event.target).addClass('animated fadeOutRight not-final');
     $(event.target).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', hide);
 
     function hide() {
@@ -489,7 +488,7 @@ function removeFoodOption(event) {
     }
     console.log("GAME OVER");
     h2.textContent = "Tonight You Will Dine On:"
-    var finalOption = document.querySelector(".foodOption:not(.rollOut)");
+    var finalOption = document.querySelector(".foodOption:not(.not-final)");
     finalOption.setAttribute("class", "final-option");
     finalOption.removeEventListener("click", removeFoodOption);
     var finalHeading = document.querySelector("h1");
@@ -545,7 +544,7 @@ function addRecipe() {
     }
 
   else if (turn === 2) {
-    $(event.target).addClass('animated fadeOutLeft');
+    $(event.target).addClass('animated fadeOutLeft not-final');
     $(event.target).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', hide);
 
     function hide() {
@@ -559,7 +558,7 @@ function addRecipe() {
   }
 
   else if (turn % 2 === 0) {
-    $(event.target).addClass('animated fadeOutLeft');
+    $(event.target).addClass('animated fadeOutLeft not-final');
     $(event.target).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', hide);
 
     function hide() {
@@ -570,7 +569,7 @@ function addRecipe() {
   }
 
   else {
-    $(event.target).addClass('animated fadeOutRight');
+    $(event.target).addClass('animated fadeOutRight not-final');
     $(event.target).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', hide);
 
     function hide() {

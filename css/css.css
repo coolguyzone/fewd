@@ -31,7 +31,7 @@ h1, h2 {
   text-shadow: 2px 2px 2px black;
   /*cursor pointer makes the mouse cursor into a hand over the divs*/
   cursor: pointer;
-
+  
 }
 
 .search, .recipe{
@@ -57,7 +57,7 @@ h1, h2 {
 .recipe {
   height: 150px;
   line-height: 150px;
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 
 .allOptions a {
