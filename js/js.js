@@ -359,8 +359,8 @@ var foods = [
     name: "Falafel",
     category: "mediterranean",
     emoji: "🇮🇱",
-    recipelink: "Traditional Falafel",
-    recipename: "https://toriavey.com/toris-kitchen/2011/01/falafel/"
+    recipelink: "https://toriavey.com/toris-kitchen/2011/01/falafel/",
+    recipename: "Traditional Falafel"
   },
   {
     name: "Greasy Spoon",
@@ -630,7 +630,7 @@ shuffle.addEventListener("click", shuffleFoods);
 
 //Fix search size and text size ISSUES
 
-//Remove underline from search
+
 
 
 
@@ -646,7 +646,7 @@ shuffle.addEventListener("click", shuffleFoods);
 
 //Turn this into an app
 
-//Add recipe suggestions?
+
 
 
 
@@ -711,3 +711,9 @@ shuffle.addEventListener("click", shuffleFoods);
 
   //Make the divs bounce out to opposite sides
    //*changed the animations so that they alternate between left to right
+
+   //Remove underline from search
+     //*fixed by targetting the parent div
+
+     //Add recipe suggestions?
+       //*added recipes
