@@ -384,17 +384,22 @@ function removeFoodOption(event) {
     var finalHeading = document.querySelector("h1");
     finalHeading.textContent = "IT HAS BEEN DECIDED!";
 //add search option
-    var foodType = finalOption.getAttribute("food-type");
-    var searchLink = document.createElement("a");
-    searchLink.setAttribute("href", "https://www.google.com/#q=" + foodType + "+nearby");
-    document.querySelector(".allOptions").appendChild(searchLink);
-    var search = document.createElement("div");
-    search.setAttribute("class", "search");
-    search.classList.add('animated');
-    search.classList.add('bounceInLeft');
+    $(finalOption).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', addSearch);
 
-    search.textContent = "🔎 Find " + foodType + " Near You";
-    searchLink.appendChild(search);
+    function addSearch() {
+      var foodType = finalOption.getAttribute("food-type");
+      var searchLink = document.createElement("a");
+      searchLink.setAttribute("href", "https://www.google.com/#q=" + foodType + "+nearby");
+      document.querySelector(".allOptions").appendChild(searchLink);
+      var search = document.createElement("div");
+      search.setAttribute("class", "search");
+      search.classList.add('animated');
+      search.classList.add('bounceInLeft');
+
+      search.textContent = "🔎 Find " + foodType + " Near You";
+      searchLink.appendChild(search);
+    }
+
 
 
 
