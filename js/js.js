@@ -371,6 +371,18 @@ var foods = [
   }
 ]
 
+var playerConditions = [
+  "is taller",
+  "is shorter",
+  "has longer hair",
+  "has shorter hair",
+  "has bigger feet",
+  "has smaller feet",
+  "is older",
+  "is younger",
+  "has lighter eyes",
+  "has darker eyes"
+]
 
 
 var colors = [
@@ -419,6 +431,10 @@ for (var i = 0; i < colorStopLimit; i++) {
   randoColors.push(colors[randoColorIndex]);
   var removedColors = colors.splice(randoColorIndex, 1)[0];
 }
+
+//Change the condition for who is player one:
+playerConditionIndex = Math.floor(Math.random() * playerConditions.length);
+document.querySelector(".player-condition").textContent = playerConditions[playerConditionIndex];
 
 
 
@@ -555,6 +571,8 @@ function addRecipe() {
 //Eliminate shuffle after first turn has been taken
     console.log("test!");
     shuffle.setAttribute("class", "hidden");
+//Hide player condition after first turn
+    document.querySelector("h3").setAttribute("class", "hidden");
   }
 
   else if (turn % 2 === 0) {
