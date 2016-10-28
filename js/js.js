@@ -381,7 +381,11 @@ var playerConditions = [
   "is older",
   "is younger",
   "has lighter eyes",
-  "has darker eyes"
+  "has darker eyes",
+  "has bigger hands",
+  "has smaller hands",
+  "has the bigger nose",
+  "has the smaller nose"
 ]
 
 
