@@ -1,5 +1,6 @@
 
 
+var tip = 0;
 
 function calculateTips(event){
   event.preventDefault();
@@ -27,24 +28,57 @@ function calculateTips(event){
       tipdivs[i].addEventListener("click", setTipAMT);
 
       }
+      function setTipAMT(event) {
+        var tipsplit = document.querySelector(".tip-split");
+        tipsplit.classList.remove('hide');
+        if ($(event.target).hasClass('tipdiv5')) {
+          tip = tip5.textContent;
+          console.log(tip);
+        }
+        else if ($(event.target).hasClass('tipdiv10')) {
+          tip = tip10.textContent;
+          console.log(tip);
+        }
+        else if ($(event.target).hasClass('tipdiv15')) {
+          tip = tip15.textContent;
+          console.log(tip);
+        }
+        else if ($(event.target).hasClass('tipdiv20')) {
+          tip = tip20.textContent;
+          console.log(tip);
+        }
+        else if ($(event.target).hasClass('tipdiv25')) {
+          tip = tip25.textContent;
+          console.log(tip);
+        }
+        console.log(tip);
+        activateSplits();
 
-  }
+        function activateSplits() {
+          var splitDivs = document.querySelectorAll(".splitdiv");
+          for (var i = 0; i < splitDivs.length; i++) {
+            splitDivs[i].addEventListener("click", setSplit);
+        }
+        function setSplit(event) {
+          var totals = document.querySelector(".totals");
+          totals.classList.remove('hide');
+          var totalBill = document.querySelector(".total-bill");
+          if ($(event.target).hasClass('splitdiv1')) {
+            totalBill.textContent = tip;
+            console.log(totalBill);
+          }
+          else if ($(event.target).hasClass('tipdiv10')) {
+            var tip = tip10.textContent;
+            console.log(tip);
+          }
 
-  function setTipAMT(event) {
-    var tipsplit = document.querySelector(".tip-split");
-    tipsplit.classList.remove('hide');
-    if ($(event.target).hasClass('tipdiv5')) {
+        }
+      }
     }
-    else if ($(event.target).hasClass('tipdiv10')) {
-    }
-    else if ($(event.target).hasClass('tipdiv15')) {
-    }
-    else if ($(event.target).hasClass('tipdiv20')) {
-    }
-    else if ($(event.target).hasClass('tipdiv25')) {
-    }
-  }
-}
+
+
+  }}
+
 
 
 
