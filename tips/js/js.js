@@ -1,39 +1,53 @@
 
 
 var tip = 0;
+var tip5 = document.querySelector(".tip5");
+  var tip10 = document.querySelector(".tip10");
+  var tip15 = document.querySelector(".tip15");
+  var tip20 = document.querySelector(".tip20");
+  var tip25 = document.querySelector(".tip25");
+  var tipAmounts = document.querySelector(".tip-amount");
+  var amount = document.querySelector(".form-control");
+  var tipdivs = document.querySelectorAll(".tipdiv");
+  var tipsplit = document.querySelector(".tip-split");
+  var totals = document.querySelector(".totals");
+  var splitDivs = document.querySelectorAll(".splitdiv");
+  var totalBill = document.querySelector(".total-bill");
+  var totalTip = document.querySelector(".total-tip");
+  var totalPer = document.querySelector(".total-per");
 
 function calculateTips(event){
   event.preventDefault();
-  var tipAmounts = document.querySelector(".tip-amount");
+
   tipAmounts.classList.remove('hide');
-  var amount = document.querySelector(".form-control");
+;
   amount = amount.value;
-  var tip5 = document.querySelector(".tip5");
+
   tip5.textContent = (amount * 0.05).toFixed(2);
-  var tip10 = document.querySelector(".tip10");
   tip10.textContent = (amount * 0.10).toFixed(2);
-  var tip15 = document.querySelector(".tip15");
   tip15.textContent = (amount * 0.15).toFixed(2);
-  var tip20 = document.querySelector(".tip20");
   tip20.textContent = (amount * 0.20).toFixed(2);
-  var tip25 = document.querySelector(".tip25");
   tip25.textContent = (amount * 0.25).toFixed(2);
 
   activateTips();
 
+
+
   function activateTips() {
-    var tipdivs = document.querySelectorAll(".tipdiv");
 
     for (var i = 0; i < tipdivs.length; i++) {
       tipdivs[i].addEventListener("click", setTipAMT);
 
       }
+
+
       function setTipAMT(event) {
-        var tipsplit = document.querySelector(".tip-split");
+
         tipsplit.classList.remove('hide');
         if ($(event.target).hasClass('tipdiv5')) {
           tip = tip5.textContent;
-          console.log(tip);
+
+
         }
         else if ($(event.target).hasClass('tipdiv10')) {
           tip = tip10.textContent;
@@ -52,33 +66,57 @@ function calculateTips(event){
           console.log(tip);
         }
         console.log(tip);
+
+        }
+
         activateSplits();
 
-        function activateSplits() {
-          var splitDivs = document.querySelectorAll(".splitdiv");
-          for (var i = 0; i < splitDivs.length; i++) {
-            splitDivs[i].addEventListener("click", setSplit);
-        }
-        function setSplit(event) {
-          var totals = document.querySelector(".totals");
-          totals.classList.remove('hide');
-          var totalBill = document.querySelector(".total-bill");
-          if ($(event.target).hasClass('splitdiv1')) {
-            totalBill.textContent = tip;
-            console.log(totalBill);
-          }
-          else if ($(event.target).hasClass('tipdiv10')) {
-            var tip = tip10.textContent;
-            console.log(tip);
-          }
 
-        }
-      }
+
+
+
+  }
+
+  function activateSplits() {
+
+    for (var i = 0; i < splitDivs.length; i++) {
+      splitDivs[i].addEventListener("click", setSplit);
+  }
+
+  function setSplit(event) {
+
+    totals.classList.remove('hide');
+    totalBill.textContent = amount;
+    totalTip.textContent = tip;
+
+    if ($(event.target).hasClass('splitdiv1')) {
+      $(totalPer).addClass('hide');
+
+      console.log(totalBill);
+    }
+    else if ($(event.target).hasClass('splitdiv2')) {
+      totalPer.textContent = (amount / 2).toFixed(2);
+      console.log(tip);
     }
 
+    else if ($(event.target).hasClass('splitdiv3')) {
+      totalPer.textContent = (amount / 3).toFixed(2);
+      console.log(tip);
+    }
 
-  }}
+    else if ($(event.target).hasClass('splitdiv4')) {
+      totalPer.textContent = (amount / 4).toFixed(2);
+      console.log(tip);
+    }
 
+    else if ($(event.target).hasClass('splitdiv5')) {
+      totalPer.textContent = (amount / 5).toFixed(2);
+      console.log(tip);
+    }
+
+  }
+}
+}
 
 
 
