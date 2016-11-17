@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="css/css.css" media="screen" title="no title">
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  </head>
+  <body>
+<!-- HOW MUCH IS THE BILL -->
+    <div class="bill-total">
+      <h2>HOW MUCH IS YOUR BILL?</h2>
+        <div class="amount-row">
+          <input type="text" class="textInput" placeholder="$0.00" /> <button type="button" class="amt-btn" name="button">That Much!</button>
+        </div>
+    </div>
+<!-- TIP AMOUNT -->
+    <div class="tip-amount hide">
+      <h2>HOW MUCH YOU WANNA TIP?</h2>
+      <div class="tip-buttons">
+        <button type="button" name="button" class="tip-btn tipdiv5"><h3 class="tipdiv5">5%</h3><h4 class="tipdiv5">TIP AMT: $<span class="tip5"></span></h4></button>
+        <button type="button" name="button" class="tip-btn tipdiv10"><h3 class="tipdiv10">10%</h3><h4 class="tipdiv10">TIP AMT: $<span class="tip10"></span></h4></button>
+        <button type="button" name="button" class="tip-btn tipdiv15"><h3 class="tipdiv15">15%</h3><h4 class="tipdiv15">TIP AMT: $<span class="tip15"></span></h4></button>
+        <button type="button" name="button" class="tip-btn tipdiv20"><h3 class="tipdiv20">20%</h3><h4 class="tipdiv20">TIP AMT: $<span class="tip20"></span></h4></button>
+        <button type="button" name="button" class="tip-btn tipdiv25"><h3 class="tipdiv25">25%</h3><h4 class="tipdiv25">TIP AMT: $<span class="tip25"></span></h4></button>
+
+      </div>
+    </div>
+
+    <!-- SPLIT -->
+
+    <div class="tip-split hide">
+      <h2>HOW YOU WANNA SPLIT IT?</h2>
+      <div class="split-buttons">
+        <button type="button" name="button" class="tip-btn splitdiv1"><h3 class="splitdiv1">DON'T SPLIT</h3></button>
+        <button type="button" name="button" class="tip-btn splitdiv2"><h3 class="splitdiv2">2 WAYS</h3></button>
+        <button type="button" name="button" class="tip-btn splitdiv3"><h3 class="splitdiv3">3 WAYS</h3></button>
+        <button type="button" name="button" class="tip-btn splitdiv4"><h3 class="splitdiv4">4 WAYS</h3></button>
+        <button type="button" name="button" class="tip-btn splitdiv5"><h3 class="splitdiv5">5 WAYS</h3></button>
+      </div>
+
+        <!--TOTALS  -->
+
+        <div class="totals hide">
+
+            <h2>TOTAL BILL: $<span class="total-bill"></span></h2>
+            <h2>TOTAL TIP: $<span class="total-tip"></span></h2>
+            <h2 class="splith2">TOTAL PER PERSON: $<span class="total-per"></span></h2>
+
+        </div>
+
+        <script type="text/javascript" src="js/js.js">
+
+        </script>
+
+  </body>
+</html>

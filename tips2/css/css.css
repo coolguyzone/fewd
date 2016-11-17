@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: arial;
+}
+
+h2 {
+  text-align: center;
+  font-size: 4em;
+  margin: 50px 0px;
+}
+
+.amount-row {
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input {
+  flex: 3;
+  margin-left: 20px;
+  height: 100px;
+  border-radius: 5px;
+  font-size: 3em;
+
+}
+
+.amt-btn {
+  flex: 2;
+  margin-left: 90px;
+  background-color: #286090;
+  color: white;
+  border-radius: 5px;
+  font-size: 3em;
+}
+
+.tip-buttons, .split-buttons {
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tip-btn {
+  flex: 1;
+  background-color: #286090;
+  color: white;
+  border-radius: 5px;
+  margin: 0 10px;
+  height: 100px;
+}
+
+button h3 {
+  font-size: 2.5em;
+}
+
+button h4 {
+  font-size: 1.5em;
+  margin-top: 50px;
+
+}
+
+.totals {
+margin-top: 40px;
+}
+
+.totals h2 {
+    margin: 10px 0px;
+}
+
+.hide {
+  display: none;
+}
