@@ -76,3 +76,10 @@ margin-top: 40px;
 .hide {
   display: none;
 }
+
+.reload {
+  cursor: pointer;
+  text-decoration: underline;
+  text-align: center;
+  font-size: 2.5em;
+}

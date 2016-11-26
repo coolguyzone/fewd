@@ -24,6 +24,7 @@ var tipAmounts = document.querySelector(".tip-amount");
   var totalTip = document.querySelector(".total-tip");
   var totalPer = document.querySelector(".total-per");
   var splitH2 = document.querySelector(".splith2");
+  var reload = document.querySelector(".reload");
 
 function calculateTips(event){
   event.preventDefault();
@@ -167,6 +168,13 @@ function calculateTips(event){
 
 
 document.querySelector(".amt-btn").addEventListener("click", calculateTips);
+
+//start over
+function reloadPage(event) {
+  location.reload();
+}
+
+reload.addEventListener("click", reloadPage);
 
 // To Fix:
 // Make buttons turn red when clicked anywhere, and turn blue again when another button is selected. Make sure space between buttons does NOT turn red.

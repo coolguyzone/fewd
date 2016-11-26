@@ -1,0 +1,113 @@
+<div class="controls">
+  <button type="button" class="control control-stop">Stop</button>
+  <button type="button" class="control control-slow">Slow</button>
+  <button type="button" class="control control-go">Go</button>
+  <button type="button" class="control control-caution">Caution</button>
+</div>
+
+<div class="stop-light">
+  <div class="light light-stop"></div>
+  <div class="light light-slow"></div>
+  <div class="light light-go"></div>
+</div>
+
+<style media="screen">
+* {
+  box-sizing: border-box;
+}
+.stop-light {
+  width: 180px;
+  height: 400px;
+  background-color: #E9C400;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+
+}
+
+.light {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.light-stop {
+
+}
+
+</style>
+
+<script type="text/javascript">
+
+var controlStop = document.querySelector(".control-stop");
+var controlGo = document.querySelector(".control-go");
+var controlSlow = document.querySelector(".control-slow");
+var controlCaution = document.querySelector(".control-caution");
+var stopLight = document.querySelector(".stop-light");
+var lightStop = document.querySelector(".light-stop");
+var lightSlow = document.querySelector(".light-slow");
+var lightGo = document.querySelector(".light-go");
+var lights = document.querySelectorAll(".light");
+
+function stopButton(event) {
+    clearInterval(flicker);
+  lightSlow.setAttribute('style', 'background-color: rgba(0, 0, 0, 0.5);');
+  lightGo.setAttribute('style', 'background-color: rgba(0, 0, 0, 0.5);');
+  lightStop.setAttribute('style', 'background-color: red;');
+}
+
+controlStop.addEventListener("click", stopButton);
+
+function goButton(event) {
+    clearInterval(flicker);
+    lightSlow.setAttribute('style', 'background-color: rgba(0, 0, 0, 0.5);');
+    lightStop.setAttribute('style', 'background-color: rgba(0, 0, 0, 0.5);');
+    lightGo.setAttribute('style', 'background-color: green;');
+
+}
+
+controlGo.addEventListener("click", goButton);
+
+
+function slowButton(event) {
+    clearInterval(flicker);
+  lightSlow.setAttribute('style', 'background-color: yellow;');
+  lightStop.setAttribute('style', 'background-color: rgba(0, 0, 0, 0.5);');
+  lightGo.setAttribute('style', 'background-color: rgba(0, 0, 0, 0.5);');
+  clearInterval();
+}
+
+controlSlow.addEventListener("click", slowButton);
+
+function toggleSlow() {
+  if (x === 1) {
+  lightSlow.setAttribute('style', 'background-color: yellow;');
+  x = 2;
+} else {
+  lightSlow.setAttribute('style', 'background-color: rgba(0, 0, 0, 0.5);');
+  x = 1;
+}
+
+}
+
+flicker = 'foo';
+
+function cautionButton(event) {
+  lightStop.setAttribute('style', 'background-color: rgba(0, 0, 0, 0.5);');
+  lightGo.setAttribute('style', 'background-color: rgba(0, 0, 0, 0.5);');
+  lightSlow.setAttribute('style', 'background-color: rgba(0, 0, 0, 0.5);');
+  flicker = setInterval(toggleSlow, 1000);
+  x = 1;
+
+}
+
+controlCaution.addEventListener("click", cautionButton);
+
+
+
+</script>
