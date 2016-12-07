@@ -8,18 +8,19 @@
     <script type="text/javascript">
 
 
-    var suitcase = {
-        shirt: "Hawaiian"
+    var languages = {
+        english: "Hello!",
+        french: "Bonjour!",
+        notALanguage: 4,
+        spanish: "Hola!"
     };
 
-    if (suitcase.hasOwnProperty('shorts')) {
-        console.log(suitcase.shorts);
+    // print hello in the 3 different languages
+    for(var x in languages) {
+      if(typeof x = "string") {
+          console.log(languages[x]);
         }
-
-        else {
-           suitcase.shorts = "boombooms";
-           console.log(suitcase.shorts);
-        };
+    };
 
     </script>
   </body>
