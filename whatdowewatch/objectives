@@ -1,0 +1,13 @@
+Objective: Make a webapp that behaves similarly to my random food app, but instead of displaying random foods from an array, it will display random movies using the imdb api. When the final movie is selected, offer an ability to check and see if the movie is available to be streamed using canistream.it.
+
+Challenges:
+-Figure out how to randomize IMDB titles.
+  -choose a number between 000001 and 3748528 (rogue one)
+
+-Figure out how to add a search option with 'can I stream it' (how do I add the spaces between the words?)
+
+-Rebuild my original html/css/javascript from the previous project.
+
+-Pick a new name for the site, but a new domain
+
+-Find a way to accomodate for larger movie titles
