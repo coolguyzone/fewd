@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: "Canterbury";
-    src: url(canterbury.ttf) format("truetype");
+    src: url(../alexkrawiec/Canterbury.ttf) format("truetype");
 }
 
 body {
