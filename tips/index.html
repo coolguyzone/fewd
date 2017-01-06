@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/css.css" media="screen" title="no title">
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+  <header>
+    <div class="bill-total">
+    <div class="row">
+      <div class="col-xs-11 col-xs-offset-1 how-much">
+        <h2>HOW MUCH IS YOUR BILL?</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6 col-xs-offset-1">
+      <form class="form-inline">
+      <div class="form-group">
+        <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+        <div class="input-group">
+          <div class="input-group-addon">$</div>
+          <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+          <div class="input-group-addon">.00</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-4">
+      <button type="submit" class="btn btn-primary bill-btn">That Much!</button>
+    </div>
+    </form>
+  </div>
+</div>
+
+<!--ENTER TIP AMOUNT -->
+  <div class="tip-amount hide">
+  <div class="row">
+    <div class="col-xs-11 col-xs-offset-1 how-much">
+      <h2>HOW MUCH YOU WANNA TIP?</h2>
+    </div>
+  </div>
+
+  <div class="tip-buttons">
+    <div class="row">
+      <div class="col-xs-2 col-xs-offset-1 tipdiv tipdiv5">
+        <h3>5%</h3>
+        <p>TIP AMT: $<span class="tip5">4.55</span></p>
+      </div>
+
+      <div class="col-xs-2 tipdiv tipdiv10">
+        <h3>10%</h3>
+        <p>TIP AMT: $<span class="tip10">4.55</span></p>
+      </div>
+
+      <div class="col-xs-2 tipdiv tipdiv15">
+        <h3>15%</h3>
+        <p>TIP AMT: $<span class="tip15">4.55</span></p>
+      </div>
+
+      <div class="col-xs-2 tipdiv tipdiv20">
+        <h3>20%</h3>
+        <p>TIP AMT: $<span class="tip20">4.55</span></p>
+      </div>
+
+      <div class="col-xs-2 tipdiv tipdiv25">
+        <h3>25%</h3>
+        <p>TIP AMT: $<span class="tip25">4.55</span></p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!--Split the tip -->
+
+  <div class="tip-split hide">
+    <div class="row col-xs-offset-1">
+      <div class="col-xs-11 how-much">
+        <h2>HOW YOU WANNA SPLIT IT?</h2>
+      </div>
+    </div>
+
+
+  <div class="tip-buttons">
+    <div class="row">
+      <div class="col-xs-2 col-xs-offset-1 tipdiv splitdiv splitdiv1">
+        <h3>DON'T SPLIT</h3>
+
+      </div>
+
+      <div class="col-xs-2 tipdiv splitdiv splitdiv2">
+        <h3>2 WAYS</h3>
+      </div>
+
+      <div class="col-xs-2 tipdiv splitdiv splitdiv3">
+        <h3>3 WAYS</h3>
+      </div>
+
+      <div class="col-xs-2 tipdiv splitdiv splitdiv4">
+        <h3>4 WAYS</h3>
+      </div>
+
+      <div class="col-xs-2 tipdiv splitdiv splitdiv5">
+        <h3>5 WAYS</h3>
+      </div>
+
+    </div>
+  </div>
+
+
+<!-- totals -->
+  <div class="totals hide">
+    <div class="row">
+      <div class="col-xs-11 col-xs-offset-1 how-much">
+        <h2>TOTAL BILL: $<span class="total-bill"></span></h2>
+        <h2>TOTAL TIP: $<span class="total-tip"></span></h2>
+        <h2>TOTAL PER PERSON: $<span class="total-per"></span></h2>
+      </div>
+    </div>
+  </div>
+
+
+  </header>
+
+
+<script type="text/javascript" src="js/js.js">
+
+</script>
+  </body>
+</html>

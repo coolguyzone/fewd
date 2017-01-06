@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Twitter</title>
+    <link rel="stylesheet" href="css/twittercss.css">
+  </head>
+  <body>
+
+    <header>
+      <a href="index.html"><h2>Twitter</h2></a>
+      <nav>
+        <a href="signup.html"><button type="button" class="signupbutton">Sign Up</button></a>
+        <a href="login.html"><button type="button">Log In</button></a>
+      </nav>
+    </header>
+
+
+    <main>
+      <div class="row">
+        <img src="img/steve.jpeg">
+        <div class="tweetcontent">
+          <div class="createtweet">
+            <textarea placeholder="What's happening?"></textarea>
+            <span class="maxchars">140</span>
+          </div>
+          <a href="http://poop.bike"><button type="button" class="tweetbutton">Tweet</button></a>
+        </div>
+      </div>
+      <div class="row">
+        <img src="img/tim.jpeg" class="responseavatar">
+        <div class="tweetcontent">
+          <p class="comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+          <p class="like">Like</p> <span class="likecount">(12)</span>
+        </div>
+      </div>
+      <div class="row">
+        <img src="img/eric.jpeg" class="responseavatar">
+        <div class="tweetcontent">
+          <p class="comment">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+          <p class="like">Like</p> <span class="likecount">(6)</span>
+        </div>
+      </div>
+      <div class="row finalrow">
+        <img src="img/chippy.jpeg" class="responseavatar">
+        <div class="tweetcontent">
+          <p class="comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+          <p class="like">Like</p>
+          <span class="likecount">(54)</span>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <span class="about">About Us</span>
+      <span class="careers">Careers</span>
+      <span class="press">Press</span>
+      <span class="terms">Terms of Service</span>
+      <span class="privacy">Privacy Policy</span>
+      <span class="contact">Contact Us</span>
+    </footer>
+
+    <script type="text/javascript">
+
+    //Create a FN: createTweet(text, image)
+      //do.qs 10 times or so, append 10 times or so, set attribute 4 or 5 times, add classes 7 or so times
+      //reference the html
+
+    //Attach event listener to the form
+      //listen for submit and call some function
+
+    function newComment (event) {
+      console.log(event)
+
+      event.preventDefault();
+
+      var newRow = document.createElement("div");
+      newRow.setAttribute("class", "row finalrow");
+      // document.querySelector("main").appendChild(newRow);
+      document.querySelector("main").insertBefore(newRow, document.querySelector("main").childNodes[2]);
+
+      var newImg = document.createElement("img");
+      newImg.setAttribute("src", "img/steve.jpeg");
+      newImg.setAttribute("class", "responseavatar");
+      newRow.appendChild(newImg);
+
+      var newTweetContent = document.createElement("div");
+      newTweetContent.setAttribute("class", "tweetcontent");
+      newRow.appendChild(newTweetContent);
+
+      var newComment = document.createElement("p");
+      newComment.setAttribute("class", "comment");
+      newComment.textContent = document.querySelector("textarea").value;
+      newTweetContent.appendChild(newComment);
+
+      var newLike = document.createElement("p");
+      newLike.setAttribute("class", "like");
+      newLike.textContent = "Like";
+      newTweetContent.appendChild(newLike);
+
+      var newLikeCount = document.createElement("span");
+      newLikeCount.setAttribute("class","likecount");
+      newLikeCount.textContent = "(69)";
+      newTweetContent.appendChild(newLikeCount);
+
+      document.querySelector(".finalrow").setAttribute("class", "row");
+
+      document.querySelector("textarea").value = "";
+      document.querySelector(".maxchars").textContent = "140";
+
+    }
+
+    var a = document.querySelector(".tweetbutton");
+    a.addEventListener("click", newComment);
+
+    //ADD THE EVENT handleR AND LINK IT TO OUR function
+    //MAKE THE FUNCTION TAKE TEXT FROM THE TEXTAREA box
+    //CLEAR THE TEXTAREA BOX
+
+    function tweetCounter (event) {
+      document.querySelector(".maxchars").textContent = 140 - document.querySelector("textarea").value.length;
+    }
+
+    var b = document.querySelector("textarea");
+    b.addEventListener("keyup", tweetCounter);
+
+    </script>
+
+  </body>
+</html>

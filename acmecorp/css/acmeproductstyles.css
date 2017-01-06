@@ -1,0 +1,34 @@
+.products img {
+  width: 200px;
+  height: auto;
+  border: 6px solid lightgray;
+  border-radius: 5px;
+  float: left;
+  margin-right: 20px;
+
+
+}
+
+
+
+.products p {
+  display: inline;
+}
+
+.products hr {
+  display: block;
+}
+
+main {
+  height: 750px;
+}
+
+button {
+  width: 133px;
+  height: 43px;
+}
+
+.products a {
+  text-decoration: none;
+  color: #2A4CB2;
+}

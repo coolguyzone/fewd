@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  background-color: black;
+}
+
+
+.how-much {
+  text-align: center;
+}
+
+
+.input-group, .form-control {
+  height: 100px;
+  line-height: 100px;
+  font-size: 1.5em;
+}
+
+
+.bill-btn {
+  height: 100px;
+  width: 100%;
+  margin-right: 30px;
+}
+
+.tipdiv {
+  background-color: blue;
+  height: 100px;
+  border-radius: 10%;
+  margin-right: 10px;
+}
+
+.firsttip {
+  margin-left: 10px;
+}
+
+.totals h2 {
+  font-size: 4em;
+}
+
+.hide {
+  display: none;
+}

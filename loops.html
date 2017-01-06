@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      var names = ["avand", "mike", "kirstin", "lucas"];
+      var randoms = [];
+      var stopLimit = names.length;
+      //build a new array with all the names in uppercase
+      for (var i = 0; i < stopLimit; i++) {
+        var randoIndex = Math.floor(Math.random() * names.length);
+        randoms.push(names[randoIndex]);
+        var randomNames = names.splice(randoIndex, 1)[0];
+
+      }
+      console.log(randoms);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Movie Search</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style media="screen">
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: lightgrey;
+        font-family: arial;
+      }
+
+      main {
+        width: 70%;
+        background-color: white;
+
+        margin-left: auto;
+        margin-right: auto;
+
+      }
+
+      .firstrow {
+          height: 120px;
+        margin-top: 32px;
+        line-height: 120px;
+      }
+
+      form {
+        text-align: center;
+      }
+
+      .searchbox {
+        width: 60%;
+        height: 38px;
+        padding-left: 12px;
+
+      }
+
+      .searchbutton {
+        width: 20%;
+        height: 38px;
+        background-color: limegreen;
+        color: white;
+      }
+
+      .searchbox, .searchbutton {
+        border-radius: 5px;
+        font-size: 1.3em;
+
+      }
+
+      .resultrow {
+        background-color: white;
+        padding-left: 60px;
+        height: 100px;
+        font-size: 1.3em;
+        border-bottom: 1px solid gray;
+        padding-bottom: 20px;
+        margin-top: 20px;
+      }
+
+
+      .title {
+        display: block;
+        text-decoration: none;
+        color: green;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .year {
+        color: gray;
+
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="row firstrow">
+        <form action="index.html" method="post">
+            <input class="searchbox" type="text" name="searchbox" value="" placeholder="Movie title">
+            <input type="submit" name="titlesubmit" value="Search" class="searchbutton">
+          </form>
+        </div>
+
+        <div class="resultrow">
+          <a href="imdb.com"><span class="title">The Matrix</span></a>
+          <span class="year">1999</year>
+        </div>
+
+
+
+    </main>
+
+    <script type="text/javascript">
+
+
+    var main = document.querySelector("main");
+    var oldResults = document.querySelectorAll(".resultrow");
+
+
+    function movieSearch(event) {
+        event.preventDefault();
+
+
+
+        for (var i = 0; i < oldResults.length; i++) {
+          // main.removeChild(newDiv);
+          console.log(oldResults);
+        }
+
+
+        var searchTerm = document.querySelector(".searchbox").value;
+        $.get("http://omdbapi.com/?s=" + searchTerm, displayResults);
+    }
+
+    function displayResults(results) {
+
+
+
+      for (var i = 0; i < results["Search"].length; i++) {
+
+        var newDiv = document.createElement("div");
+        newDiv.setAttribute("class", "resultrow");
+        document.querySelector("main").appendChild(newDiv);
+        var newTitleLink = document.createElement("a");
+        newTitleLink.setAttribute("href", "http://www.imdb.com/title/" + results["Search"][i].imdbID);
+        newDiv.appendChild(newTitleLink);
+        var newTitleText = document.createElement("span");
+        newTitleText.setAttribute("class", "title");
+        newTitleText.textContent = results["Search"][i].Title;
+        newTitleLink.appendChild(newTitleText);
+        var newYear = document.createElement("span");
+        newYear.setAttribute("class", "year");
+        newYear.textContent = results["Search"][i].Year;
+        newDiv.appendChild(newYear);
+      }
+    }
+
+    document.querySelector("form").addEventListener("submit", movieSearch)
+
+    </script>
+  </body>
+</html>

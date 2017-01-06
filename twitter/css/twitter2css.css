@@ -1,0 +1,157 @@
+
+
+
+body {
+  margin: 0;
+  background-color: #f1f0f5;
+  font-family: arial;
+}
+
+/* HEADER AND NAV */
+
+nav {
+  float: right;
+  margin-right: 20px;
+}
+
+header h2 {
+  display: inline;
+  font-size: 2.9em;
+  margin-left: 34px;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+header {
+  background: linear-gradient(rgb(48, 196, 133), rgb(7, 148, 88));
+  height: 82px;
+  padding-top: 24px;
+}
+
+/* BUTTONS */
+
+button {
+  color: white;
+  background-color: #069456;
+  width: 90px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 1px 1px 1px rgb(5, 119, 69);
+}
+
+.signupbutton {
+  margin-right: 2px;
+}
+
+.tweetbutton {
+  margin-left: 0px;
+  margin-bottom: 14px;
+  margin-top: 10px;
+}
+
+/* MAIN */
+
+main {
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 84%;
+  margin-top: 46px;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.row {
+display: flex;
+border-bottom: 1px solid lightgray;
+}
+
+.finalrow {
+  border: none;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  margin-left: 15px;
+  margin-top: 10px;
+  margin-right: 15px;
+  display: block;
+  float:left;
+
+}
+
+textarea {
+  width: 98%;
+  display: relative;
+  height: 68px;
+  color: #a9a9a9;
+  border-radius: 5px;
+  padding-top: 14px;
+  padding-left: 14px;
+  font-size: 1.15em;
+  margin-top: 10px;
+}
+
+.tweetcontent {
+  flex: 1;
+}
+
+
+.comment {
+  font-size: 1.8em;
+  margin-top: 24px;
+  margin-bottom: 0;
+  padding-top: 6px;
+}
+
+.like {
+    display: inline-block;
+    color: #069456;
+    font-size: 1.4em;
+    font-weight: 800;
+    margin-top: 8px;
+}
+
+.likecount {
+  color: #cccccc;
+  font-size: 1.2em;
+  font-weight: 100;
+}
+
+.createtweet {
+  position: relative;
+}
+
+.maxchars {
+  position: absolute;
+  bottom: 11px;
+  right: 12px;
+  font-weight: 600;
+}
+
+.responseavatar {
+  margin-top: 24px;
+}
+
+footer {
+  display: flex;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  margin-bottom: 70px;
+}
+
+footer span {
+  flex-grow: 1;
+  color: #b4b4b4;
+  font-size: 1.2em;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cards</title>
+    <style>
+    body {
+      background-color: #59A856;
+      font-family: sans-serif;
+    }
+
+    /* Define the styles for a card here... */
+    *{
+      box-sizing: border-box;
+    }
+
+
+    .card {
+      background-color: white;
+      width: 60px;
+      height: 100px;
+      border-radius: 5px;
+      text-align: center;
+      padding-top: 10px;
+      margin: 20px;
+      display: inline-block;
+
+    }
+    </style>
+  </head>
+  <body>
+    <button id="deal">
+      Deal a new hand
+    </button>
+
+    <div id="board">
+      <!-- <div class="card">8h</div> -->
+
+
+      <!-- cards will go here (js will put them here) -->
+      <!-- try making a couple just to make sure they look right -->
+    </div>
+
+    <script>
+    var suits = [
+      "♠️",
+      "❤️",
+      "♦️",
+      "♣️"
+    ];
+
+    var values = [
+      "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"
+    ];
+
+    var board = document.querySelector("#board");
+    var dealButton =  document.querySelector("#deal");
+
+    function deal() {
+      for (var f = 0; f < suits.length; f++) {
+        for (var g = 0; g < values.length; g++) {
+          var newCard = document.createElement("div");
+          newCard.setAttribute("class", "card");
+          newCard.textContent = values[g] + suits[f];
+          board.appendChild(newCard);
+        }
+  }
+    }
+
+    document.querySelector("button").addEventListener("click", deal);
+    </script>
+  </body>
+</html>

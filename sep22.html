@@ -1,0 +1,55 @@
+<ul>
+  <li class="milk">Milk</li>
+  <li class="cookies">Cookies</li>
+</ul>
+
+
+
+<button type="button" name="button">Click</button>
+
+<form class="" action="index.html" method="post">
+  <input type="text" name="name" value="">
+  <input type="submit" name="name" value="Save Changes">
+
+  here is a <a href="http://google.com">link</a>
+
+</form>
+
+
+<script type="text/javascript">
+  var button = document.querySelector("button");
+  button.addEventListener("click", handleButtonClick);
+
+  function handleButtonClick (event) {
+    console.log(event);
+  }
+
+  var form = document.querySelector("form");
+
+  form.addEventListener("submit", handleFormSubmit);
+
+  function handleFormSubmit (foo) {
+    console.log(foo);
+  }
+
+  var a = document.querySelector("a");
+
+  a.addEventListener("click", handleLinkClick);
+
+  function handleLinkClick(event) {
+    event.preventDefault();
+    console.log(event);
+  }
+
+  var milk = document.querySelector(".milk");
+  var cookies = document.querySelector(".cookies");
+
+  function consume(event) {
+    event.preventDefault();
+
+    console.log("delicious");
+  }
+
+  milk.addEventListener("click", consume);
+    cookies.addEventListener("click", consume);
+</script>

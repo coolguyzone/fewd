@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+h1 {
+  margin-top: 22px;
+  margin-bottom: 10px;
+}
+
+h1, h2, h3 {
+  color: white;
+  text-align: center;
+
+}
+
+h3, h2 {
+  font-size: 1.5em;
+  margin-top: 6px;
+  margin-bottom: 6px;
+
+}
+
+.foodOption {
+  /*width: 450px;
+  height: 105px;*/
+  /*line height same as height makes text vertically centered*/
+  /*line-height: 105px;*/
+  /*setting margin left and right auto horizontally centers divs*/
+  width: 675px;
+  height: 156px;
+  line-height: 156px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2.8em;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: white;
+  border-radius: 10px;
+  text-shadow: 2px 2px 2px black;
+  /*cursor pointer makes the mouse cursor into a hand over the divs*/
+  cursor: pointer;
+
+}
+
+.search, .recipe{
+  width: 675px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: white;
+  border-radius: 10px;
+  text-shadow: 2px 2px 2px black;
+  text-decoration: none;
+}
+
+.search {
+  height: 100px;
+  line-height: 100px;
+  font-size: 1.8em;
+  background-color: red;
+}
+
+.recipe {
+  height: 100px;
+  line-height: 100px;
+  font-size: 1.2em;
+  background-color: gray;
+}
+
+.allOptions a {
+  text-decoration: none;
+}
+
+
+.final-option {
+  width: 676px;
+  height: 156px;
+  line-height: 156px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2.8em;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: white;
+  border-radius: 10px;
+  text-shadow: 2px 2px 2px black;
+
+
+}
+
+/*hidden class is for divs that have been eliminated from options*/
+.hidden {
+  display: none;
+}
+
+.shuffle {
+  color: white;
+  text-align: center;
+  font-size: 1.3em;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.player-condition {
+  color: #7a7cff;
+}
+
+/*Media queries for desktop vs mobile*/
+/*Desktop sizes*/
+
+@media only screen and (min-device-width: 800px) {
+  .foodOption, .final-option {
+    width: 500px;
+    height: 79px;
+    line-height: 79px;
+  }
+
+  .search, .recipe {
+    width: 500px;
+    height: 42px;
+    line-height: 42px;
+
+  }
+
+  .search {
+    height: 42px;
+    line-height: 42px;
+  }
+
+  .recipe {
+    height: 42px;
+    line-height: 42px;
+  }
+
+
+
+
+.copyright {
+  color: white;
+  position: fixed;
+  bottom: 6px;
+  left: 6px;
+}
+
+}

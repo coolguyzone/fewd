@@ -1,0 +1,72 @@
+Final Project Overview:
+
+A tool for couples who can't decide where they want to eat. It will present the couple with 7 randomly chosen options and the couple will then be able to take turns eliminating one choice on the list until they are finally left with one option, which will be the type of food they should eat. The page could then bring up a local yelp search for that type of food in their area.
+
+Domain Idea: whatdoweeat.com
+
+Functionality: When the site loads there will be 1 column with 7 rectangular DIVs of different colors on screen with a different food option on each DIV. The site will prompt 'player 1' to eliminate an option. When one of the DIVs gets clicked on, it will then disappear from the page. Then 'player 2' will be prompted to eliminate the next option. When the penultimate option on screen gets eliminated, there will be some kind of celebration screen announcing what you are going to eat, and a button will appear giving you the ability to do a yelp search for that kind of food.
+
+Idea: dice roll. When you load the page, above the divs there will be notification of a dice roll, essentially saying 'the player on the left/right goes first' depending on the dice roll.
+
+
+Food categories:
+chinese
+thai
+vietnamese
+mexican
+tacos
+burritos
+burgers
+sandwiches
+pizza
+deep-dish pizza
+dim sum
+sushi
+ramen
+pho
+steak
+diner breakfast
+mediterranean
+gyros
+acai bowls
+japanese
+rotisserie chicken
+food court
+german
+subs
+indian
+pasta
+burmese?
+jewish deli
+barbecue
+ribs
+korean
+african
+fried chicken
+salad
+seafood
+shrimp
+fish
+fish n chips
+pub grub
+caribbean (puerto rican/cuban/jamaican)
+corn dogs
+french
+spanish
+soul food
+wings
+greek
+falafel
+
+
+Challenges:
+
+-Need Javascript to make DIVs disappear (hopefully in a fun/animated way)
+
+-Need JS to randomly select 7 options and assign to the DIVs
+
+-Need JS for coin toss
+
+-Need to incorporate yelp search
+
+-How will colors be assigned?

@@ -1,139 +1,188 @@
 <!DOCTYPE HTML>
-<head>
+<!-- fixes to make
 
-<style media="screen">
+-header seems to be a little bit too tall
+*changed header height from 96px to 74px
 
-* {
-  font-family: "Lucida Grande";
+-'products' text shadow looks off, shadow color too dark?
+*changed shadow color from black to a gray value
 
-}
+-'products' link too close to button, padding?
+*changed padding-right from 10 to 20px
 
-body {
-  margin: 0px;
-  background-image: url("images/background.png");
-}
+- button looks too round
+-changed border radius from 10px to 5px
 
-header {
-  background-color: #c4c4c4;
-  height: 96px;
-  width: auto;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  box-shadow: 0 1px 1px #888888;
-}
+-button looks too tall
+*changed to height: 45px and width: 105px
 
-header img {
-  height: 96px;
-  float: left;
+-button shadow looks off, wrong color?
+*changed border color to black
 
-}
+-acme logo looks too big
+*changed height from 96 to 60px
 
-header button {
-  background-color: #2A4CB2;
-  color: white;
-  margin-right: 20px;
-  margin-top: 20px;
-  height: 50px;
-  width: 120px;
-  font-size: 1em;
-  border-radius: 10px;
-}
+-header border looks too thick or dark
+*changed border color from black to a gray value
 
-nav {
-  float: right;
-}
+-border/shadow on main box seems a little different
+*changed shadow color from black to a gray value
 
-header a {
-  margin-right: 10px;
-  padding-top: 10px;
-  color: white;
-  text-shadow: 1px 1px black;
-  text-decoration: none;
+-hr bar looks 3-dimensional in screenshot, 2-dimensional in my version
+*added box shadow
 
-}
+-footer text is too big
+*changed font size to 0.77em
 
+-header image too close to top. padding?
+*added padding top 6px
 
+-button padding off
+-changed margin-top to 15px
 
-main {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 600px;
-  background-color: white;
-  border-radius: 5px;
-  padding: 20px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  box-shadow: 0 3px 3px #888888;
-}
+-header image too close to left edge
+*added padding-left 16px
 
+-footer text color looks a bit off
+*changed color
 
+-hr width a bit short
+*changed hr width to 640px
 
-footer {
-  text-align: center;
-  height: 96px;
-  color: rgb(141, 147, 163);
 
-}
+-->
 
-footer hr {
-  width: 600px;
-  border: 1px solid rgb(226, 226, 226);
-}
+  <head>
+    <meta charset="utf-8">
+    <title>ACME Corp</title>
+    <style media="screen">
 
-</style>
+    * {
+      font-family: "Lucida Grande";
 
+    }
 
+    body {
+      margin: 0px;
+      background-image: url("images/background.png");
+    }
 
-</head>
-<body>
+    header {
+      background-color: #c4c4c4;
+      height: 74px;
+      width: auto;
+      border-top: 1px solid rgb(148, 148, 148);
+      border-bottom: 1px solid rgb(148, 148, 148);
+      box-shadow: 0 1px 1px #888888;
+    }
 
-<header>
-  <img src="images/acme-corp.jpg">
+    header img {
+      height: 60px;
+      float: left;
+      padding-top: 6px;
+      padding-left: 16px;
 
-  <nav>
-    <a href="fakelink.com">Products</a>
-    <button type="button">Sign Up</button>
-  </nav>
+    }
 
-</header>
+    header button {
+      background-color: #2A4CB2;
+      color: white;
+      margin-right: 20px;
+      margin-top: 15px;
+      height: 45px;
+      width: 105px;
+      font-size: 1em;
+      border-radius: 5px;
+      border: 1px solid black;
 
-<main>
 
-  <p><h1>Welcome to ACME Corp!</h1></p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    }
 
-</main>
+    nav {
+      float: right;
 
-<footer>
-  <hr>
-  <p>Copyright, 2015</p>
+    }
 
-</footer>
+    header a {
+      margin-right: 20px;
+      padding-top: 10px;
+      color: white;
+      text-shadow: 1px 1px rgb(93, 107, 192);
+      text-decoration: none;
 
+    }
 
 
 
+    main {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 660px;
+      background-color: white;
+      border-radius: 5px;
+      padding: 25px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      box-shadow: 0px 0px 7px 1px rgba(199,199,199,0.75), inset 0px 0px 0px 1px rgb(199,199,199);
+      font-weight: 700;
 
+    }
 
+    main h1 {
+    font-weight: 900;
+    }
 
 
 
+    footer {
+      text-align: center;
+      color: rgb(166, 153, 154);
+      font-size: 0.77em;
 
+    }
 
+    footer hr {
+      width: 710px;
+        background-color: rgb(226, 226, 226);
+        height: 2px;
+        box-shadow: 0 1px 2px 0px white;
+        border: none;
+    }
 
+    footer p {
+      padding-top: 17px;
+    }
 
+    </style>
 
 
 
+  </head>
+  <body>
 
+  <header>
+    <a href="index.html"><img src="images/acme-corp.jpg"></a>
 
+    <nav>
+      <a href="products.html">Products</a>
+      <a href="signup.html"><button type="button">Sign Up</button></a>
+    </nav>
 
+  </header>
 
+  <main>
 
+    <p><h1>Welcome to ACME Corp!</h1></p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
+  </main>
 
+  <footer>
+    <hr>
+    <p>Copyright, 2015</p>
 
+  </footer>
 
 
 
@@ -148,4 +197,29 @@ footer hr {
 
 
 
-</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

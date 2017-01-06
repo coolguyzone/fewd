@@ -1,0 +1,52 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<form>
+  <input type="search" id="query" placeholder="GitHub username">
+  <input type="submit" value="Lookup" class="button">
+</form>
+
+<table>
+  <tr>
+    <th>Name:</th>
+    <td id="user-name"></td>
+  </tr>
+  <tr>
+    <th>Bio:</th>
+    <td id="user-bio"></td>
+  </tr>
+  <tr>
+    <th>Picture:</th>
+    <td id="user-picture"></td>
+  </tr>
+</table>
+
+<script>
+//
+
+function getName(event) {
+
+  event.preventDefault();
+  document.querySelector("#user-name").textContent = "";
+  document.querySelector("#user-bio").textContent = "";
+
+
+  username = document.querySelector("#query").value;
+  $.get("https://api.github.com/users/" + username, handleResults);
+
+  function handleResults(results) {
+    document.querySelector("#user-name").textContent = results.name;
+    document.querySelector("#user-bio").textContent = results.bio;
+    var profilePic = document.createElement("img");
+    profilePic.setAttribute("src", results.avatar_url);
+    document.querySelector("#user-picture").appendChild(profilePic);
+    document.querySelector("#user-picture").src = results.avatar_url;
+  }
+
+  document.querySelector("#query").value = "";
+}
+
+var a = document.querySelector(".button");
+a.addEventListener("click", getName);
+
+
+</script>
