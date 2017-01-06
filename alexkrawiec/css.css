@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Canterbury";
+    src: url(canterbury.ttf) format("truetype");
+}
+
+body {
+  font-family: helvetica;
+}
+
+.header {
+  background:url('img/header.jpg');
+  height: 400px;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 5em;
+  margin-top: 300px;
+  color: white;
+}
+
+.navigation ul {
+  font-family: "Canterbury";
+  text-align: center;
+  margin: 100px 0;
+}
+
+.navigation li {
+  display: inline-block;
+  font-size: 5em;
+  margin: 0 50px;
+}
+
+.navigation, .content {
+  border-bottom: 1px solid black;
+}
+
+.content {
+
+}
+
+.content h2 {
+  font-size: 4em;
+  margin: 80px 0 80px 50px;
+}
+
+.toggle-switch {
+  width: 40px;
+  margin: 20px 0 0 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.wp {
+  width: 300px;
+  height: 300px;
+
+}
+
+.col-md-4 {
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.col-md-4 h3 {
+  margin-top: 10px;
+}
+
+.resume img {
+  width: 80%;
+}
+
+.resume {
+  text-align: center;
+  background-color: black;
+  padding: 30px 0;
+  margin: 0 0 30px 0;
+}
+
+.contact {
+  border-bottom: none;
+}
+
+.contact li {
+  font-size: 1.7em;
+}
+
+.contact h3, .contact ul {
+  margin-left: 50px;
+}
+
+.about-img {
+  width: 400px;
+
+}
+
+.about h3 {
+  font-size: 3em;
+}

@@ -1,0 +1,28 @@
+OVERVIEW: MAKE A PERSONAL WEBSITE THAT HIGHLIGHTS MY WEB PROJECTS, RESUME, FICTION WRITING, AND HAS AN 'ABOUT' AND 'CONTACT' SECTION
+
+Layout/Design: This will be one of those websites with a bunch of horizontal bars going down the screen.
+-The top bar will just be an image with my name in lowercase in the lower right corner.
+-The next bar will be kind of a cryptic navigation bar with a set of spaced out capital letters that reads 'WP R SF A C', these will direct the user to Web projects, Resume, Short Fiction, About, and Contact sections
+-The remaining bars will be short and mostly blank with just their corresponding headings, probably centered 'Web Projects', 'Resume', etc. and in the upper right hand corner there will be a little circle button with a '+' inside of it. When you click on the '+' it becomes a '-' and the corresponding section will expand. Clicking on the corresponding letters in the navigation bar will also open up and focus on these sections. Clicking on the '-' will once again hide that section and turn back into a '+' (it's a toggle switch).
+-The footer will probably just be a copyright with my name.
+
+Section By Section:
+-Web Projects: this will be a bootstrap grid of 3 squares per line (right now only one row), each one will have a screencap of the web project and it's corresponding title listed underneath. As of now these will be: 'WhatDoWeEat.com', 'Tip Calculator', and 'Coming Soon'.
+-Resume: This will probably just be an image of the PDF of my resume, perhaps on a gray background.
+-Short Fiction: Right now I think this will just open up an onscreen display of my 'casino' story, with the title of the story and then underneath 'Published In The Winter 2010 Edition Of 'Forum' Magazine'
+-About: A paragraph about myself with a square image of me floated to the right.
+-Contact: This will contain my email address, facebook, and linkedin accounts
+
+Tech Components:
+-Bootstrap
+-JQuery
+
+-Action Items:
+-Figure out the toggle
+-Buy The Domain
+-Choose A Font
+-Choose A Color Scheme
+
+
+TO FIX:
+-header background stretch
